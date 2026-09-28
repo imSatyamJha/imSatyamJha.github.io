@@ -34,7 +34,6 @@
             background-color: var(--bg-color);
             color: var(--text-main);
             line-height: 1.5;
-            padding-bottom: 0;
         }
 
         /* HEADER NAVBAR */
@@ -42,7 +41,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 14px 6%;
+            padding: 12px 5%;
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(12px);
             position: sticky;
@@ -51,14 +50,9 @@
             border-bottom: 1px solid rgba(0,0,0,0.05);
         }
 
-        .navbar-logo {
-            display: flex;
-            align-items: center;
-        }
-
         .navbar-logo img {
-            height: 48px;
-            max-height: 48px;
+            height: 44px;
+            max-height: 44px;
             width: auto;
             object-fit: contain;
             display: block;
@@ -67,174 +61,47 @@
         .logo-fallback-text {
             font-family: 'Syne', sans-serif;
             font-weight: 800;
-            font-size: 1.3rem;
-            letter-spacing: -0.5px;
+            font-size: 1.2rem;
             color: var(--primary-red);
             text-transform: uppercase;
         }
 
-        .nav-right-actions {
+        /* TOP RIGHT ACTION PILLS (Co, Self, IMDb) */
+        .nav-pills {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 8px;
         }
 
-        .imdb-btn {
+        .pill-btn {
             text-decoration: none;
-            background-color: #f5c518;
-            color: #000;
-            font-size: 0.85rem;
+            background: #ffffff;
+            color: var(--text-main);
+            font-size: 0.8rem;
             font-weight: 700;
-            padding: 8px 16px;
+            padding: 7px 14px;
             border-radius: 100px;
-        }
-
-        /* THREE DOTS BUTTON */
-        .dots-menu-btn {
-            background: #f4f4f7;
             border: 1px solid var(--border-color);
-            border-radius: 50%;
-            width: 42px;
-            height: 42px;
             display: flex;
             align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            font-size: 1.4rem;
-            font-weight: 800;
-            color: var(--text-main);
-            user-select: none;
+            gap: 5px;
             transition: all 0.2s ease;
         }
 
-        .dots-menu-btn:hover {
-            background: var(--primary-red);
-            color: #fff;
-            border-color: var(--primary-red);
+        .pill-btn:hover {
+            border-color: var(--text-main);
         }
 
-        /* OVERLAY MENU (PURE LIGHT & RED THEME) */
-        .menu-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
-            background: #ffffff;
-            z-index: 999;
-            display: none;
-            flex-direction: column;
-            overflow-y: auto;
-        }
-
-        .menu-overlay.active {
-            display: flex;
-        }
-
-        .overlay-top-bar {
-            padding: 16px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .overlay-top-bar img {
-            height: 42px;
-            width: auto;
-        }
-
-        .close-menu-btn {
-            background: #f4f4f7;
-            border: 1px solid var(--border-color);
-            color: var(--text-main);
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            font-size: 1.2rem;
-            font-weight: 700;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .overlay-menu-content {
-            padding: 30px 24px;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .menu-links-list {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 18px;
-        }
-
-        .menu-links-list a {
-            text-decoration: none;
-            color: #1e6fa8;
-            font-size: 1.1rem;
-            font-weight: 600;
-            transition: color 0.2s ease;
-        }
-
-        .menu-links-list a:hover {
-            color: var(--primary-red);
-        }
-
-        .submit-profile-btn {
-            display: block;
-            width: 100%;
-            background: var(--primary-red);
-            color: #ffffff;
-            text-decoration: none;
-            text-align: center;
-            padding: 16px;
-            border-radius: 12px;
-            font-size: 1rem;
-            font-weight: 700;
-            margin-top: 10px;
-            box-shadow: 0 8px 20px -6px rgba(229, 9, 20, 0.4);
-        }
-
-        .overlay-insta-links {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin-top: 20px;
-            padding-top: 20px;
-            border-top: 1px solid var(--border-color);
-        }
-
-        .insta-link-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            text-decoration: none;
-            padding: 14px;
-            border-radius: 12px;
-            font-weight: 700;
-            font-size: 0.95rem;
-        }
-
-        .insta-link-btn.personal {
-            background: var(--red-soft);
-            color: var(--primary-red);
-        }
-
-        .insta-link-btn.company {
-            background: #000;
-            color: #fff;
+        .pill-btn.imdb {
+            background-color: #f5c518;
+            color: #000000;
+            border-color: #f5c518;
         }
 
         /* HERO SECTION */
         .hero {
             text-align: center;
-            padding: 50px 20px 30px;
+            padding: 40px 20px 20px;
             max-width: 800px;
             margin: 0 auto;
         }
@@ -249,66 +116,39 @@
             text-transform: uppercase;
             padding: 8px 18px;
             border-radius: 100px;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
         }
 
         .hero-title {
             font-family: 'Syne', sans-serif;
-            font-size: clamp(2.2rem, 6vw, 3.8rem);
+            font-size: clamp(2rem, 5vw, 3.5rem);
             font-weight: 800;
             line-height: 1.1;
             letter-spacing: -1px;
-            margin-bottom: 24px;
+            margin-bottom: 20px;
             color: #0d0d12;
-        }
-
-        .hero-ctas {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-
-        .btn-primary {
-            background: var(--primary-red);
-            color: #fff;
-            text-decoration: none;
-            font-weight: 700;
-            padding: 14px 28px;
-            border-radius: 14px;
-            box-shadow: 0 8px 20px -6px rgba(229, 9, 20, 0.4);
-        }
-
-        .btn-secondary {
-            background: #fff;
-            color: var(--text-main);
-            text-decoration: none;
-            font-weight: 700;
-            padding: 14px 28px;
-            border-radius: 14px;
-            border: 1px solid var(--border-color);
         }
 
         /* PROFILE BIO SECTION */
         .profile-container {
             max-width: 700px;
-            margin: 20px auto 60px;
+            margin: 10px auto 50px;
             padding: 0 20px;
         }
 
         .profile-card {
             background: var(--card-bg);
             border-radius: var(--radius-main);
-            padding: 40px 30px;
+            padding: 35px 25px;
             text-align: center;
             box-shadow: var(--shadow-subtle);
             border: 1px solid #f0f0f4;
         }
 
         .profile-avatar-wrapper {
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 20px;
+            width: 110px;
+            height: 110px;
+            margin: 0 auto 18px;
             border-radius: 50%;
             overflow: hidden;
             border: 4px solid #fff;
@@ -327,26 +167,33 @@
 
         .profile-name {
             font-family: 'Syne', sans-serif;
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: 800;
-            margin-bottom: 4px;
+            margin-bottom: 2px;
         }
 
         .profile-title-sub {
             color: var(--primary-red);
             font-weight: 800;
-            font-size: 0.82rem;
+            font-size: 0.8rem;
             letter-spacing: 2px;
             text-transform: uppercase;
             margin-bottom: 16px;
         }
 
+        /* BOLD & RED EXPERIENCE HIGHLIGHT */
         .profile-bio {
             color: var(--text-muted);
             font-size: 0.95rem;
             line-height: 1.65;
             max-width: 540px;
             margin: 0 auto;
+        }
+
+        .profile-bio strong {
+            color: var(--primary-red);
+            font-weight: 800;
+            font-size: 1.05rem;
         }
 
         /* SHOWCASE SECTION WITH SLIDER */
@@ -365,7 +212,7 @@
 
         .section-header h2 {
             font-family: 'Syne', sans-serif;
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             font-weight: 800;
         }
 
@@ -375,13 +222,13 @@
         }
 
         .arrow-btn {
-            width: 40px;
-            height: 40px;
+            width: 38px;
+            height: 38px;
             border-radius: 50%;
             border: 1px solid var(--border-color);
             background: #fff;
             color: var(--text-main);
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -460,6 +307,34 @@
             color: var(--text-main);
         }
 
+        /* BRANDS SECTION */
+        .brands-section {
+            max-width: 1100px;
+            margin: 0 auto 80px;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .brands-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 16px;
+            margin-top: 25px;
+        }
+
+        .brand-box {
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--text-muted);
+            box-shadow: var(--shadow-subtle);
+        }
+
         /* FOOTER */
         .site-footer {
             background-color: #0b0b0e;
@@ -470,21 +345,15 @@
             border-top: 4px solid var(--primary-red);
         }
 
-        .footer-logo {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
         .footer-logo img {
             height: 55px;
             width: auto;
             object-fit: contain;
+            margin-bottom: 15px;
         }
 
         .footer-tagline {
-            font-size: 1rem;
+            font-size: 0.95rem;
             color: #a1a1aa;
             margin-bottom: 25px;
             font-style: italic;
@@ -510,66 +379,31 @@
         @media (max-width: 600px) {
             .project-card { min-width: 220px; max-width: 220px; }
             .section-header h2 { font-size: 1.3rem; }
-            .navbar-logo img { height: 38px; }
+            .nav-pills { gap: 6px; }
+            .pill-btn { padding: 6px 10px; font-size: 0.75rem; }
         }
     </style>
 </head>
 <body>
 
-    <!-- NAVBAR HEADER -->
+    <!-- NAVBAR HEADER WITH CO., SELF, IMDb -->
     <header class="navbar">
         <div class="navbar-logo">
             <img src="Black and White Elegant Signature Photography Logo_20260929_014429_0000.jpg" alt="Satyam Jha Logo" onerror="this.style.display='none'; document.getElementById('hdr-txt').style.display='block';">
             <span id="hdr-txt" class="logo-fallback-text" style="display:none;">Satyam Jha</span>
         </div>
         
-        <div class="nav-right-actions">
-            <a href="https://imdb.com" target="_blank" class="imdb-btn">IMDb</a>
-            <!-- THREE DOTS MENU BUTTON -->
-            <button class="dots-menu-btn" onclick="openMenu()" aria-label="Open Menu">⋮</button>
+        <div class="nav-pills">
+            <a href="https://www.instagram.com/satyamjhacastingcompany" target="_blank" class="pill-btn">📷 Co.</a>
+            <a href="https://www.instagram.com/imsatyamjha" target="_blank" class="pill-btn">📷 Self</a>
+            <a href="https://www.imdb.com/name/nm16049281/" target="_blank" class="pill-btn imdb">IMDb</a>
         </div>
     </header>
-
-    <!-- MENU OVERLAY (ANTICASTING LAYOUT, RED THEME) -->
-    <div class="menu-overlay" id="menuOverlay">
-        <div class="overlay-top-bar">
-            <div class="navbar-logo">
-                <img src="Black and White Elegant Signature Photography Logo_20260929_014429_0000.jpg" alt="Satyam Jha Logo" onerror="this.style.display='none'; document.getElementById('menu-hdr-txt').style.display='block';">
-                <span id="menu-hdr-txt" class="logo-fallback-text" style="display:none;">Satyam Jha</span>
-            </div>
-            <button class="close-menu-btn" onclick="closeMenu()">✕</button>
-        </div>
-
-        <div class="overlay-menu-content">
-            <ul class="menu-links-list">
-                <li><a href="#about" onclick="closeMenu()">About Us</a></li>
-                <li><a href="#submit" onclick="closeMenu()">Contact Us</a></li>
-                <li><a href="#" onclick="closeMenu()">Home</a></li>
-                <li><a href="#showcase" onclick="closeMenu()">Our Work</a></li>
-                <li><a href="#services" onclick="closeMenu()">Services</a></li>
-            </ul>
-
-            <a href="mailto:thatismesatyam@gmail.com" class="submit-profile-btn">Submit Your Profile</a>
-
-            <div class="overlay-insta-links">
-                <a href="https://www.instagram.com/imsatyamjha" target="_blank" class="insta-link-btn personal">
-                    📷 Personal Instagram (@imsatyamjha)
-                </a>
-                <a href="https://www.instagram.com/satyamjhacastingcompany" target="_blank" class="insta-link-btn company">
-                    🎬 Company Instagram (@satyamjhacastingcompany)
-                </a>
-            </div>
-        </div>
-    </div>
 
     <!-- HERO SECTION -->
     <section class="hero">
         <span class="hero-badge">Casting Director</span>
         <h1 class="hero-title">The Future Of Casting Is Here</h1>
-        <div class="hero-ctas">
-            <a href="#showcase" class="btn-primary">Explore Work</a>
-            <a href="#submit" class="btn-secondary">Submit Profile</a>
-        </div>
     </section>
 
     <!-- PROFILE BIO SECTION -->
@@ -588,9 +422,10 @@
 
     <!-- WORK SHOWCASE SECTION -->
     <main class="showcase" id="showcase">
+        <!-- FEATURE FILMS -->
         <section style="margin-bottom: 50px;">
             <div class="section-header">
-                <h2>Feature Films & Upcoming</h2>
+                <h2>Feature Films</h2>
                 <div class="slider-controls">
                     <button class="arrow-btn" onclick="scrollSlider('films-slider', -280)">←</button>
                     <button class="arrow-btn" onclick="scrollSlider('films-slider', 280)">→</button>
@@ -598,22 +433,6 @@
             </div>
             
             <div class="cards-slider" id="films-slider">
-                <div class="project-card">
-                    <div class="card-img-holder">
-                        <img src="Bharat Bhagya Vidhata.Jpg.jpg" alt="Bharat Bhagya Viddhaata">
-                        <span class="platform-tag">Feature Film</span>
-                    </div>
-                    <div class="card-details"><h3>Bharat Bhagya Viddhaata</h3></div>
-                </div>
-
-                <div class="project-card">
-                    <div class="card-img-holder">
-                        <img src="VVAN.JPG.jpg" alt="VVAN">
-                        <span class="platform-tag">Feature Film</span>
-                    </div>
-                    <div class="card-details"><h3>VVAN</h3></div>
-                </div>
-
                 <div class="project-card">
                     <div class="card-img-holder">
                         <img src="Border 2.jpeg" alt="Border 2">
@@ -629,9 +448,42 @@
                     </div>
                     <div class="card-details"><h3>Azaad</h3></div>
                 </div>
+
+                <div class="project-card">
+                    <div class="card-img-holder">
+                        <img src="Jewel Thief.jpg" alt="Jewel Thief">
+                        <span class="platform-tag" style="background:#e50914; color:#fff;">Netflix</span>
+                    </div>
+                    <div class="card-details"><h3>Jewel Thief</h3></div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-img-holder">
+                        <img src="Maalik.jpg" alt="Maalik">
+                        <span class="platform-tag">Feature Film</span>
+                    </div>
+                    <div class="card-details"><h3>Maalik</h3></div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-img-holder">
+                        <img src="Bharat Bhagya Vidhata.Jpg.jpg" alt="Bharat Bhagya Vidhata">
+                        <span class="platform-tag">Feature Film</span>
+                    </div>
+                    <div class="card-details"><h3>Bharat Bhagya Vidhata</h3></div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-img-holder">
+                        <img src="VVAN.JPG.jpg" alt="VVAN">
+                        <span class="platform-tag">Feature Film</span>
+                    </div>
+                    <div class="card-details"><h3>VVAN</h3></div>
+                </div>
             </div>
         </section>
 
+        <!-- SERIES & OTT -->
         <section id="services">
             <div class="section-header">
                 <h2>Series & OTT</h2>
@@ -645,4 +497,86 @@
                 <div class="project-card">
                     <div class="card-img-holder">
                         <img src="Black Warrant.Jpg.jpeg" alt="Black Warrant">
-                        <span class="platform-tag" style="background
+                        <span class="platform-tag" style="background:#e50914; color:#fff;">Netflix</span>
+                    </div>
+                    <div class="card-details"><h3>Black Warrant</h3></div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-img-holder">
+                        <img src="Dabba Cartel.jpg" alt="Dabba Cartel">
+                        <span class="platform-tag" style="background:#e50914; color:#fff;">Netflix</span>
+                    </div>
+                    <div class="card-details"><h3>Dabba Cartel</h3></div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-img-holder">
+                        <img src="Arranged Love.jpg" alt="Arranged Love">
+                        <span class="platform-tag">Original Movie</span>
+                    </div>
+                    <div class="card-details"><h3>Arranged Love</h3></div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-img-holder">
+                        <img src="Jab We Matched.jpg" alt="Jab We Matched">
+                        <span class="platform-tag">MiniTV</span>
+                    </div>
+                    <div class="card-details"><h3>Jab We Matched</h3></div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-img-holder">
+                        <img src="Zindagi Naagin.jpg" alt="Zindagi Naagin">
+                        <span class="platform-tag">Sony LIV</span>
+                    </div>
+                    <div class="card-details"><h3>Zindagi Naagin</h3></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- BRANDS SECTION -->
+    <section class="brands-section">
+        <div class="section-header" style="justify-content: center;">
+            <h2>Worked For These Brands</h2>
+        </div>
+        <div class="brands-grid">
+            <div class="brand-box">Goibibo</div>
+            <div class="brand-box">Google</div>
+            <div class="brand-box">Swiggy</div>
+            <div class="brand-box">Pond's</div>
+            <div class="brand-box">Zepto</div>
+            <div class="brand-box">Meta</div>
+            <div class="brand-box">PhonePe</div>
+            <div class="brand-box">KFC</div>
+            <div class="brand-box">Colgate</div>
+            <div class="brand-box">Flipkart</div>
+            <div class="brand-box">Amazon</div>
+            <div class="brand-box">Tata Play</div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer" id="submit">
+        <div class="footer-logo">
+            <img src="Black and White Elegant Signature Photography Logo_20260929_014429_0000.jpg" alt="Satyam Jha Casting Logo" onerror="this.style.display='none';">
+        </div>
+        <p class="footer-tagline">"Discovering raw talent & assembling iconic character ensembles."</p>
+        <a href="mailto:thatismesatyam@gmail.com" class="footer-cta-btn">Submit Profile / Contact Us</a>
+        <p class="copyright-text">© Satyam Jha Casting. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JAVASCRIPT FOR SLIDER -->
+    <script>
+        function scrollSlider(id, amount) {
+            document.getElementById(id).scrollBy({
+                left: amount,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+</body>
+</html>
