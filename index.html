@@ -50,16 +50,21 @@
       border-bottom: 1px solid var(--border-color);
     }
 
-    .logo-box {
-      font-family: 'Syne', sans-serif;
-      font-weight: 800;
-      letter-spacing: 2.5px;
-      font-size: 1.15rem;
-      color: #fff;
+    /* Updated Logo Styling for White BG Image on Dark Theme */
+    .logo-container {
+      display: flex;
+      align-items: center;
+      height: 45px;
     }
 
-    .logo-box span {
-      color: var(--accent-gold);
+    .logo-img {
+      height: 100%;
+      width: auto;
+      max-height: 45px;
+      object-fit: contain;
+      /* CSS Magic to make white bg transparent/inverted on dark theme */
+      filter: invert(1) brightness(1.2) contrast(1.1); 
+      mix-blend-mode: screen;
     }
 
     .header-nav-right {
@@ -430,6 +435,7 @@
       .hero-buttons { flex-direction: row; max-width: none; justify-content: center; }
       .card { min-width: 230px; max-width: 230px; }
       .poster-wrapper { height: 320px; }
+      .logo-img { max-height: 55px; } /* Slightly larger logo on desktop */
     }
   </style>
 </head>
@@ -437,7 +443,10 @@
 
   <!-- Top Navigation Bar -->
   <header>
-    <div class="logo-box">SATYAM <span>JHA</span></div>
+    <!-- Logo Replaced Here -->
+    <a href="#" class="logo-container">
+      <img src="Black%20and%20White%20Elegant%20Signature%20Photography%20Logo_20260929_014429_0000.jpg" alt="Satyam Jha Casting Logo" class="logo-img">
+    </a>
     
     <div class="header-nav-right">
       <a href="https://instagram.com/satyamjhacastingcompany" target="_blank" class="social-btn">
@@ -688,18 +697,4 @@
 
   </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; Satyam Jha Casting | Mumbai, India</p>
-  </footer>
-
-  <!-- Slider Functionality JS -->
-  <script>
-    function scrollSlider(elementId, amount) {
-      const container = document.getElementById(elementId);
-      container.scrollBy({ left: amount, behavior: 'smooth' });
-    }
-  </script>
-
-</body>
-</html>
+ 
