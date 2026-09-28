@@ -43,7 +43,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 16px 6%;
+            padding: 14px 6%;
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(12px);
             position: sticky;
@@ -57,15 +57,7 @@
             align-items: center;
         }
 
-        .logo-text {
-            font-family: 'Syne', sans-serif;
-            font-weight: 800;
-            font-size: 1.3rem;
-            letter-spacing: -0.5px;
-            color: #0d0d12;
-            text-transform: uppercase;
-        }
-
+        /* Company Logo Header Styling */
         .navbar-logo img {
             height: 48px;
             max-height: 48px;
@@ -74,18 +66,27 @@
             display: block;
         }
 
+        .logo-fallback-text {
+            font-family: 'Syne', sans-serif;
+            font-weight: 800;
+            font-size: 1.3rem;
+            letter-spacing: -0.5px;
+            color: #0d0d12;
+            text-transform: uppercase;
+        }
+
         .nav-links {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
         }
 
         .nav-btn {
             text-decoration: none;
             color: var(--text-main);
-            font-size: 0.88rem;
+            font-size: 0.85rem;
             font-weight: 600;
-            padding: 8px 16px;
+            padding: 8px 14px;
             border-radius: 100px;
             border: 1px solid var(--border-color);
             background: #fff;
@@ -106,7 +107,7 @@
         /* HERO SECTION */
         .hero {
             text-align: center;
-            padding: 60px 20px 40px;
+            padding: 50px 20px 30px;
             max-width: 800px;
             margin: 0 auto;
         }
@@ -121,7 +122,7 @@
             text-transform: uppercase;
             padding: 8px 18px;
             border-radius: 100px;
-            margin-bottom: 24px;
+            margin-bottom: 20px;
         }
 
         .hero-title {
@@ -130,7 +131,7 @@
             font-weight: 800;
             line-height: 1.1;
             letter-spacing: -1px;
-            margin-bottom: 28px;
+            margin-bottom: 24px;
             color: #0d0d12;
         }
 
@@ -149,7 +150,6 @@
             padding: 14px 28px;
             border-radius: 14px;
             box-shadow: 0 8px 20px -6px rgba(229, 9, 20, 0.4);
-            transition: transform 0.2s;
         }
 
         .btn-secondary {
@@ -165,7 +165,7 @@
         /* PROFILE CARD SECTION */
         .profile-container {
             max-width: 700px;
-            margin: 30px auto 70px;
+            margin: 20px auto 60px;
             padding: 0 20px;
         }
 
@@ -179,8 +179,8 @@
         }
 
         .profile-avatar-wrapper {
-            width: 130px;
-            height: 130px;
+            width: 120px;
+            height: 120px;
             margin: 0 auto 20px;
             border-radius: 50%;
             background: #f4f4f7;
@@ -200,7 +200,7 @@
 
         .profile-name {
             font-family: 'Syne', sans-serif;
-            font-size: 2.2rem;
+            font-size: 2rem;
             font-weight: 800;
             margin-bottom: 4px;
         }
@@ -211,18 +211,18 @@
             font-size: 0.82rem;
             letter-spacing: 2px;
             text-transform: uppercase;
-            margin-bottom: 18px;
+            margin-bottom: 16px;
         }
 
         .profile-bio {
             color: var(--text-muted);
-            font-size: 0.98rem;
+            font-size: 0.95rem;
             line-height: 1.65;
             max-width: 540px;
             margin: 0 auto;
         }
 
-        /* SHOWCASE SECTION */
+        /* SHOWCASE SECTION WITH SLIDER */
         .showcase {
             max-width: 1100px;
             margin: 0 auto 80px;
@@ -230,43 +230,79 @@
         }
 
         .section-header {
-            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
         }
 
         .section-header h2 {
             font-family: 'Syne', sans-serif;
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             font-weight: 800;
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
         }
 
         .section-number {
             color: var(--primary-red);
         }
 
-        .cards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 24px;
+        .slider-controls {
+            display: flex;
+            gap: 8px;
+        }
+
+        .arrow-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid var(--border-color);
+            background: #fff;
+            color: var(--text-main);
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            user-select: none;
+        }
+
+        .arrow-btn:hover {
+            background: var(--text-main);
+            color: #fff;
+            border-color: var(--text-main);
+        }
+
+        .cards-slider {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding: 10px 5px 25px;
+            scrollbar-width: none;
+        }
+
+        .cards-slider::-webkit-scrollbar {
+            display: none;
         }
 
         .project-card {
+            min-width: 260px;
+            max-width: 260px;
             background: var(--card-bg);
             border-radius: var(--radius-card);
             overflow: hidden;
             box-shadow: var(--shadow-subtle);
             border: 1px solid #f0f0f4;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-            display: flex;
-            flex-direction: column;
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
         }
 
         .project-card:hover {
-            transform: translateY(-6px);
-            box-shadow: var(--shadow-hover);
+            transform: translateY(-5px);
         }
 
         .card-img-holder {
@@ -286,21 +322,17 @@
 
         .platform-tag {
             position: absolute;
-            top: 12px;
+            bottom: 12px;
             left: 12px;
-            background: rgba(0, 0, 0, 0.75);
-            backdrop-filter: blur(8px);
-            color: #fff;
-            font-size: 0.68rem;
+            background: #fde8e8;
+            color: var(--primary-red);
+            font-size: 0.65rem;
             font-weight: 800;
             letter-spacing: 1px;
-            padding: 5px 10px;
+            padding: 4px 10px;
             border-radius: 6px;
             z-index: 2;
-        }
-
-        .platform-tag.netflix {
-            background: var(--primary-red);
+            text-transform: uppercase;
         }
 
         .card-details {
@@ -308,40 +340,40 @@
         }
 
         .card-details h3 {
-            font-size: 1.05rem;
+            font-size: 1rem;
             font-weight: 700;
             color: var(--text-main);
         }
 
-        /* FOOTER BRANDING */
+        /* FOOTER */
         .site-footer {
             background-color: #0b0b0e;
             color: #ffffff;
-            padding: 70px 20px 40px;
+            padding: 60px 20px 40px;
             text-align: center;
             margin-top: 80px;
             border-top: 4px solid var(--primary-red);
         }
 
-        .footer-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
         .footer-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             margin-bottom: 20px;
         }
 
+        /* Company Logo Footer Styling */
         .footer-logo img {
-            height: 60px;
+            height: 55px;
             width: auto;
             object-fit: contain;
+            filter: brightness(0) invert(1); /* Logo ko dark background pe white karne ke liye */
         }
 
         .footer-tagline {
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: #a1a1aa;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             font-style: italic;
         }
 
@@ -350,30 +382,29 @@
             justify-content: center;
             gap: 16px;
             flex-wrap: wrap;
-            margin-bottom: 35px;
+            margin-bottom: 30px;
         }
 
         .stat-card {
             background: #18181b;
             border: 1px solid #27272a;
-            padding: 16px 24px;
+            padding: 14px 20px;
             border-radius: 16px;
-            min-width: 140px;
+            min-width: 130px;
         }
 
         .stat-val {
             font-family: 'Syne', sans-serif;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: 800;
             color: var(--primary-red);
         }
 
         .stat-lbl {
-            font-size: 0.78rem;
+            font-size: 0.75rem;
             color: #a1a1aa;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 1px;
         }
 
         .footer-cta-btn {
@@ -382,29 +413,21 @@
             color: #fff;
             text-decoration: none;
             font-weight: 700;
-            font-size: 0.95rem;
-            padding: 14px 32px;
+            font-size: 0.9rem;
+            padding: 12px 28px;
             border-radius: 100px;
-            box-shadow: 0 10px 25px rgba(229, 9, 20, 0.35);
-            transition: transform 0.2s;
-        }
-
-        .footer-cta-btn:hover {
-            transform: scale(1.03);
         }
 
         .copyright-text {
-            margin-top: 45px;
-            font-size: 0.8rem;
+            margin-top: 40px;
+            font-size: 0.78rem;
             color: #52525b;
         }
 
         @media (max-width: 600px) {
-            header.navbar { padding: 14px 4%; }
-            .navbar-logo img { height: 40px; }
-            .cards-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
-            .card-details { padding: 12px; }
-            .card-details h3 { font-size: 0.92rem; }
+            .project-card { min-width: 220px; max-width: 220px; }
+            .section-header h2 { font-size: 1.3rem; }
+            .navbar-logo img { height: 38px; }
         }
     </style>
 </head>
@@ -413,7 +436,9 @@
     <!-- NAVBAR HEADER -->
     <header class="navbar">
         <div class="navbar-logo">
-            <span class="logo-text">Satyam Jha</span>
+            <!-- Exact Company Signature Logo Path -->
+            <img src="Black and White Elegant Signature Logo.png" alt="Satyam Jha Logo" onerror="this.style.display='none'; document.getElementById('hdr-txt').style.display='block';">
+            <span id="hdr-txt" class="logo-fallback-text" style="display:none;">Satyam Jha</span>
         </div>
         <div class="nav-links">
             <a href="https://instagram.com" target="_blank" class="nav-btn">Instagram</a>
@@ -440,7 +465,7 @@
             <h2 class="profile-name">Satyam Jha</h2>
             <div class="profile-title-sub">Casting Director</div>
             <p class="profile-bio">
-                Mumbai-based Casting Director with <strong>6+ years of industry experience</strong> in discovering and assembling talent for Feature Films, High-End OTT Web Series, and Commercials. Passionate about authentic character ensemble building, talent curation, and visual narrative alignment.
+                Mumbai-based Casting Director with <strong>6+ years of industry experience</strong> in discovering and assembling talent for Feature Films, High-End OTT Web Series, and Commercials.
             </p>
         </div>
     </div>
@@ -448,89 +473,95 @@
     <!-- WORK SHOWCASE SECTION -->
     <main class="showcase" id="showcase">
         
-        <!-- FEATURE FILMS -->
+        <!-- FEATURE FILMS SLIDER -->
         <section style="margin-bottom: 50px;">
             <div class="section-header">
                 <h2><span class="section-number">01</span> Feature Films & Upcoming</h2>
+                <div class="slider-controls">
+                    <button class="arrow-btn" onclick="scrollSlider('films-slider', -280)">←</button>
+                    <button class="arrow-btn" onclick="scrollSlider('films-slider', 280)">→</button>
+                </div>
             </div>
-            <div class="cards-grid">
-                
-                <!-- Card: Bharat Bhagya Viddhaata -->
+            
+            <div class="cards-slider" id="films-slider">
+                <!-- Bharat Bhagya Viddhaata -->
                 <div class="project-card">
                     <div class="card-img-holder">
-                        <span class="platform-tag">FEATURE FILM</span>
                         <img src="Bharat Bhagya Vidhata.Jpg.jpg" alt="Bharat Bhagya Viddhaata">
+                        <span class="platform-tag">Feature Film</span>
                     </div>
                     <div class="card-details">
                         <h3>Bharat Bhagya Viddhaata</h3>
                     </div>
                 </div>
 
-                <!-- Card: VVAN -->
+                <!-- VVAN -->
                 <div class="project-card">
                     <div class="card-img-holder">
-                        <span class="platform-tag">FEATURE FILM</span>
                         <img src="VVAN.JPG.jpg" alt="VVAN">
+                        <span class="platform-tag">Feature Film</span>
                     </div>
                     <div class="card-details">
                         <h3>VVAN</h3>
                     </div>
                 </div>
 
-                <!-- Card: Border 2 -->
+                <!-- Border 2 -->
                 <div class="project-card">
                     <div class="card-img-holder">
-                        <span class="platform-tag">FEATURE FILM</span>
                         <img src="Border 2.jpeg" alt="Border 2">
+                        <span class="platform-tag">Feature Film</span>
                     </div>
                     <div class="card-details">
                         <h3>Border 2</h3>
                     </div>
                 </div>
 
-                <!-- Card: Azaad -->
+                <!-- Azaad -->
                 <div class="project-card">
                     <div class="card-img-holder">
-                        <span class="platform-tag">FEATURE FILM</span>
                         <img src="Azaad.jpg" alt="Azaad">
+                        <span class="platform-tag">Feature Film</span>
                     </div>
                     <div class="card-details">
                         <h3>Azaad</h3>
                     </div>
                 </div>
-
             </div>
         </section>
 
-        <!-- SERIES & OTT -->
+        <!-- SERIES & OTT SLIDER -->
         <section>
             <div class="section-header">
                 <h2><span class="section-number">02</span> Series & OTT</h2>
+                <div class="slider-controls">
+                    <button class="arrow-btn" onclick="scrollSlider('series-slider', -280)">←</button>
+                    <button class="arrow-btn" onclick="scrollSlider('series-slider', 280)">→</button>
+                </div>
             </div>
-            <div class="cards-grid">
-                
-                <!-- Card: Black Warrant -->
+
+            <div class="cards-slider" id="series-slider">
+                <!-- Black Warrant -->
                 <div class="project-card">
                     <div class="card-img-holder">
-                        <span class="platform-tag netflix">NETFLIX</span>
                         <img src="Black Warrant.Jpg.jpeg" alt="Black Warrant">
+                        <span class="platform-tag" style="background:#e50914; color:#fff;">Netflix</span>
                     </div>
                     <div class="card-details">
                         <h3>Black Warrant (S1)</h3>
                     </div>
                 </div>
 
-                <!-- Card: Dabba Cartel -->
+                <!-- Dabba Cartel -->
                 <div class="project-card">
                     <div class="card-img-holder">
-                        <span class="platform-tag netflix">NETFLIX</span>
                         <img src="Dabba Cartel.jpg.webp" alt="Dabba Cartel">
+                        <span class="platform-tag" style="background:#e50914; color:#fff;">Netflix</span>
                     </div>
                     <div class="card-details">
                         <h3>Dabba Cartel</h3>
                     </div>
                 </div>
-
             </div>
         </section>
 
@@ -538,35 +569,41 @@
 
     <!-- FOOTER -->
     <footer class="site-footer" id="submit">
-        <div class="footer-content">
-            <div class="footer-logo">
-                <span class="logo-text" style="color: #fff; font-size: 1.6rem;">Satyam Jha Casting</span>
-            </div>
-
-            <p class="footer-tagline">"Discovering raw talent & assembling iconic character ensembles."</p>
-
-            <div class="footer-stats-grid">
-                <div class="stat-card">
-                    <div class="stat-val">6+</div>
-                    <div class="stat-lbl">Years Exp.</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-val">OTT & Films</div>
-                    <div class="stat-lbl">Major Releases</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-val">Mumbai</div>
-                    <div class="stat-lbl">Industry Hub</div>
-                </div>
-            </div>
-
-            <a href="mailto:thatismesatyam@gmail.com" class="footer-cta-btn">Submit Profile / Contact Us</a>
-
-            <p class="copyright-text">
-                © Satyam Jha Casting. All Rights Reserved.
-            </p>
+        <div class="footer-logo">
+            <img src="Black and White Elegant Signature Logo.png" alt="Satyam Jha Casting Logo" onerror="this.style.display='none'; document.getElementById('ftr-txt').style.display='block';">
+            <span id="ftr-txt" class="logo-fallback-text" style="display:none; color:#fff; font-size:1.5rem;">Satyam Jha Casting</span>
         </div>
+        <p class="footer-tagline">"Discovering raw talent & assembling iconic character ensembles."</p>
+
+        <div class="footer-stats-grid">
+            <div class="stat-card">
+                <div class="stat-val">6+</div>
+                <div class="stat-lbl">Years Exp.</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-val">OTT & Films</div>
+                <div class="stat-lbl">Major Releases</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-val">Mumbai</div>
+                <div class="stat-lbl">Industry Hub</div>
+            </div>
+        </div>
+
+        <a href="mailto:thatismesatyam@gmail.com" class="footer-cta-btn">Submit Profile / Contact Us</a>
+
+        <p class="copyright-text">© Satyam Jha Casting. All Rights Reserved.</p>
     </footer>
+
+    <!-- SLIDER SCRIPT -->
+    <script>
+        function scrollSlider(id, amount) {
+            document.getElementById(id).scrollBy({
+                left: amount,
+                behavior: 'smooth'
+            });
+        }
+    </script>
 
 </body>
 </html>
