@@ -5,23 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Satyam Jha | Casting Director</title>
   
-  <!-- Premium Google Fonts -->
+  <!-- Google Fonts & FontAwesome Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
     :root {
       --bg-dark: #08080a;
       --bg-card: #121318;
-      --bg-glass: rgba(255, 255, 255, 0.03);
       --text-main: #f3f4f6;
       --text-muted: #9ca3af;
       --accent-gold: #e5b869;
-      --accent-gold-glow: rgba(229, 184, 105, 0.2);
-      --accent-blue: #38bdf8;
+      --accent-gold-glow: rgba(229, 184, 105, 0.25);
       --border-color: rgba(255, 255, 255, 0.08);
-      --card-radius: 16px;
     }
 
     * {
@@ -43,8 +41,8 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 18px 6%;
-      background: rgba(8, 8, 10, 0.8);
+      padding: 16px 5%;
+      background: rgba(8, 8, 10, 0.85);
       backdrop-filter: blur(12px);
       position: sticky;
       top: 0;
@@ -58,10 +56,36 @@
       letter-spacing: 2.5px;
       font-size: 1.15rem;
       color: #fff;
-      position: relative;
     }
 
     .logo-box span {
+      color: var(--accent-gold);
+    }
+
+    .header-nav-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .social-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-color);
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+
+    .social-btn:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: var(--accent-gold);
       color: var(--accent-gold);
     }
 
@@ -69,23 +93,21 @@
       background: linear-gradient(135deg, #f5c518 0%, #e2b100 100%);
       color: #000;
       font-weight: 700;
-      padding: 9px 18px;
+      padding: 8px 14px;
       border-radius: 8px;
       text-decoration: none;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       box-shadow: 0 4px 15px rgba(245, 197, 24, 0.25);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      transition: transform 0.2s ease;
     }
 
     .imdb-btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(245, 197, 24, 0.4);
     }
 
     /* Hero Section */
     .hero {
-      position: relative;
-      padding: 90px 20px 70px;
+      padding: 80px 20px 60px;
       text-align: center;
       background: radial-gradient(circle at 50% 20%, rgba(229, 184, 105, 0.08) 0%, rgba(8, 8, 10, 0) 70%);
     }
@@ -106,14 +128,13 @@
 
     .hero h1 {
       font-family: 'Syne', sans-serif;
-      font-size: 2.8rem;
+      font-size: 2.6rem;
       font-weight: 800;
       line-height: 1.15;
       margin-bottom: 25px;
       background: linear-gradient(180deg, #ffffff 0%, #a1a1aa 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      letter-spacing: -0.5px;
     }
 
     .hero-buttons {
@@ -125,7 +146,7 @@
     }
 
     .btn-solid {
-      background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+      background: #ffffff;
       color: #09090b;
       padding: 14px 24px;
       border-radius: 10px;
@@ -133,16 +154,10 @@
       font-weight: 700;
       text-align: center;
       font-size: 0.95rem;
-      box-shadow: 0 4px 20px rgba(255, 255, 255, 0.15);
-      transition: transform 0.2s ease;
-    }
-
-    .btn-solid:hover {
-      transform: translateY(-2px);
     }
 
     .btn-outline {
-      background: var(--bg-glass);
+      background: rgba(255, 255, 255, 0.03);
       border: 1px solid var(--border-color);
       color: #ffffff;
       padding: 14px 24px;
@@ -151,103 +166,134 @@
       font-weight: 600;
       text-align: center;
       font-size: 0.95rem;
-      backdrop-filter: blur(8px);
-      transition: background 0.2s ease, border-color 0.2s ease;
     }
 
-    .btn-outline:hover {
-      background: rgba(255, 255, 255, 0.08);
-      border-color: rgba(255, 255, 255, 0.2);
-    }
-
-    /* Section Styling */
+    /* Section Container */
     .section-container {
-      padding: 50px 20px;
-      max-width: 1000px;
+      padding: 40px 20px;
+      max-width: 1200px;
       margin: 0 auto;
     }
 
     .section-header {
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
 
     .section-title-large {
       font-family: 'Syne', sans-serif;
-      font-size: 2.2rem;
+      font-size: 2rem;
       font-weight: 800;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     .about-text {
       color: var(--text-muted);
-      font-size: 1rem;
-      line-height: 1.7;
+      font-size: 0.98rem;
     }
 
-    /* Category Blocks */
-    .category-item {
-      margin-bottom: 60px;
+    /* Slider / Carousel Section */
+    .category-block {
+      margin-bottom: 50px;
       background: var(--bg-card);
       border: 1px solid var(--border-color);
       border-radius: 20px;
-      padding: 28px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      padding: 24px;
+      position: relative;
     }
 
-    .category-header {
+    .category-top {
       display: flex;
       justify-content: space-between;
-      align-items: flex-end;
-      margin-bottom: 24px;
+      align-items: center;
+      margin-bottom: 20px;
       border-bottom: 1px solid var(--border-color);
-      padding-bottom: 16px;
+      padding-bottom: 14px;
+    }
+
+    .cat-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
 
     .number {
       font-family: 'Syne', sans-serif;
-      font-size: 2.2rem;
+      font-size: 1.8rem;
       font-weight: 800;
       color: var(--accent-gold);
-      line-height: 1;
     }
 
     .category-title {
       font-family: 'Syne', sans-serif;
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       font-weight: 700;
-      color: #fff;
-      margin-top: 4px;
     }
 
-    /* Grid Layout for Cards */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: rgba(255, 255, 255, 0.02);
-      padding: 14px;
-      border-radius: var(--card-radius);
-      border: 1px solid var(--border-color);
+    /* Nav Buttons for Slider */
+    .slider-controls {
       display: flex;
-      flex-direction: column;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      position: relative;
+      gap: 8px;
+    }
+
+    .nav-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-color);
+      color: #fff;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      transition: all 0.2s ease;
+    }
+
+    .nav-btn:hover {
+      background: var(--accent-gold);
+      color: #000;
+      border-color: var(--accent-gold);
+    }
+
+    /* Horizontal Scroll Track */
+    .slider-container {
+      display: flex;
+      gap: 18px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      padding-bottom: 10px;
+      scrollbar-width: none;
+    }
+
+    .slider-container::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Slide Item Card */
+    .card {
+      min-width: 210px;
+      max-width: 210px;
+      background: rgba(255, 255, 255, 0.02);
+      padding: 12px;
+      border-radius: 14px;
+      border: 1px solid var(--border-color);
+      flex-shrink: 0;
+      transition: all 0.3s ease;
     }
 
     .card:hover {
-      transform: translateY(-6px);
+      transform: translateY(-5px);
       border-color: rgba(229, 184, 105, 0.4);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 20px var(--accent-gold-glow);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5), 0 0 15px var(--accent-gold-glow);
     }
 
     .poster-wrapper {
+      width: 100%;
+      height: 290px;
+      border-radius: 10px;
       overflow: hidden;
-      border-radius: 12px;
-      margin-bottom: 14px;
-      aspect-ratio: 2 / 3;
+      margin-bottom: 12px;
       background: #18181c;
     }
 
@@ -256,49 +302,49 @@
       height: 100%;
       object-fit: cover;
       display: block;
-      transition: transform 0.5s ease;
+      transition: transform 0.4s ease;
     }
 
     .card:hover .poster-img {
-      transform: scale(1.05);
+      transform: scale(1.06);
     }
 
     .badge {
-      font-size: 0.7rem;
+      font-size: 0.65rem;
       font-weight: 700;
-      letter-spacing: 1px;
+      letter-spacing: 0.8px;
       color: var(--accent-gold);
       background: rgba(229, 184, 105, 0.1);
-      padding: 4px 10px;
-      border-radius: 6px;
+      padding: 3px 8px;
+      border-radius: 4px;
       text-transform: uppercase;
-      align-self: flex-start;
-      margin-bottom: 8px;
-    }
-
-    .card.upcoming .badge {
-      color: #f59e0b;
-      background: rgba(245, 158, 11, 0.1);
+      display: inline-block;
+      margin-bottom: 6px;
     }
 
     .card h4 {
-      font-size: 1.1rem;
+      font-size: 1rem;
       font-weight: 700;
       color: #ffffff;
-      margin-bottom: 4px;
+      margin-bottom: 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .card p {
       color: var(--text-muted);
-      font-size: 0.85rem;
+      font-size: 0.8rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
-    /* Brand Tags Styling */
+    /* Brands Flex */
     .brands-flex {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 10px;
     }
 
     .brand-tag {
@@ -307,7 +353,6 @@
       padding: 8px 16px;
       border-radius: 30px;
       font-size: 0.85rem;
-      font-weight: 500;
       color: #d1d5db;
       transition: all 0.2s ease;
     }
@@ -316,50 +361,75 @@
       background: var(--accent-gold);
       color: #000;
       font-weight: 700;
-      border-color: var(--accent-gold);
     }
 
-    /* Contact Section Card */
+    /* Contact Card & Social Links */
     .contact-card {
       background: linear-gradient(135deg, rgba(229, 184, 105, 0.08) 0%, rgba(18, 19, 24, 0.8) 100%);
       border: 1px solid rgba(229, 184, 105, 0.2);
       border-radius: 20px;
-      padding: 35px 25px;
+      padding: 35px 20px;
       text-align: center;
       margin-top: 20px;
     }
 
     .contact-card h2 {
       font-family: 'Syne', sans-serif;
-      font-size: 1.8rem;
-      margin-bottom: 10px;
+      font-size: 1.6rem;
+      margin-bottom: 8px;
     }
 
-    .contact-card a {
+    .contact-card a.mail-link {
       color: var(--accent-gold);
       text-decoration: none;
-      font-size: 1.1rem;
       font-weight: 700;
+      font-size: 1.1rem;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    .insta-links-group {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .insta-card-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-color);
+      padding: 10px 18px;
+      border-radius: 30px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+
+    .insta-card-btn:hover {
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+      border-color: transparent;
+      color: #fff;
     }
 
     /* Footer */
     footer {
       text-align: center;
-      padding: 40px 20px;
+      padding: 30px 20px;
       border-top: 1px solid var(--border-color);
       color: var(--text-muted);
       font-size: 0.85rem;
     }
 
     @media (min-width: 640px) {
-      .hero h1 {
-        font-size: 3.5rem;
-      }
-      .hero-buttons {
-        flex-direction: row;
-        max-width: none;
-        justify-content: center;
-      }
+      .hero h1 { font-size: 3.4rem; }
+      .hero-buttons { flex-direction: row; max-width: none; justify-content: center; }
+      .card { min-width: 230px; max-width: 230px; }
+      .poster-wrapper { height: 320px; }
     }
   </style>
 </head>
@@ -368,7 +438,16 @@
   <!-- Top Navigation Bar -->
   <header>
     <div class="logo-box">SATYAM <span>JHA</span></div>
-    <a href="https://www.imdb.com/name/nm11658104/" target="_blank" class="imdb-btn">IMDb Profile ↗</a>
+    
+    <div class="header-nav-right">
+      <a href="https://instagram.com/satyamjhacastingcompany" target="_blank" class="social-btn">
+        <i class="fa-brands font-awesome-icon fa-instagram"></i> Company
+      </a>
+      <a href="https://instagram.com/imsatyamjha" target="_blank" class="social-btn">
+        <i class="fa-brands font-awesome-icon fa-instagram"></i> Personal
+      </a>
+      <a href="https://www.imdb.com/name/nm11658104/" target="_blank" class="imdb-btn">IMDb ↗</a>
+    </div>
   </header>
 
   <!-- Hero Section -->
@@ -376,35 +455,39 @@
     <span class="hero-tag">Casting Director</span>
     <h1>The Future Of Casting<br>Is Here</h1>
     <div class="hero-buttons">
-      <a href="#our-work" class="btn-solid">Explore Our Work</a>
-      <a href="mailto:thatismesatyam@gmail.com" class="btn-outline">Submit Your Profile</a>
+      <a href="#portfolio" class="btn-solid">Explore Work</a>
+      <a href="mailto:thatismesatyam@gmail.com" class="btn-outline">Submit Profile</a>
     </div>
   </section>
 
-  <!-- Main Content Container -->
-  <section class="section-container" id="our-work">
+  <!-- Section Container -->
+  <section class="section-container" id="portfolio">
     
     <div class="section-header">
-      <h2 class="section-title-large">Portfolio Showcase</h2>
+      <h2 class="section-title-large">Work Showcase</h2>
       <p class="about-text">
-        Based in Mumbai, India — <strong>6+ years of industry experience</strong> across Feature Films, Web Series, and Commercials.
+        Casting Director based in Mumbai, India — <strong>6+ years of experience</strong> across Feature Films, Web Series, and Commercials.
       </p>
     </div>
 
-    <!-- Category 01: Feature Films -->
-    <div class="category-item">
-      <div class="category-header">
-        <div>
-          <div class="number">01</div>
-          <div class="category-title">Feature Films & Upcoming</div>
+    <!-- 01 Feature Films Slider -->
+    <div class="category-block">
+      <div class="category-top">
+        <div class="cat-info">
+          <span class="number">01</span>
+          <span class="category-title">Feature Films & Upcoming</span>
+        </div>
+        <div class="slider-controls">
+          <button class="nav-btn" onclick="scrollSlider('films-track', -250)">&larr;</button>
+          <button class="nav-btn" onclick="scrollSlider('films-track', 250)">&rarr;</button>
         </div>
       </div>
 
-      <div class="grid">
+      <div class="slider-container" id="films-track">
         
         <div class="card">
           <div class="poster-wrapper">
-            <img src="Border%202.jpeg" alt="Border 2 Poster" class="poster-img">
+            <img src="Border%202.jpeg" alt="Border 2" class="poster-img">
           </div>
           <span class="badge">FEATURE FILM</span>
           <h4>Border 2</h4>
@@ -413,7 +496,7 @@
 
         <div class="card">
           <div class="poster-wrapper">
-            <img src="Azaad.jpg" alt="Azaad Poster" class="poster-img">
+            <img src="Azaad.jpg" alt="Azaad" class="poster-img">
           </div>
           <span class="badge">FEATURE FILM</span>
           <h4>Azaad</h4>
@@ -422,7 +505,7 @@
 
         <div class="card">
           <div class="poster-wrapper">
-            <img src="Bharat%20Bhagya%20Vidheta_jpg.jpg" alt="Bharat Bhagya Viddhaata Poster" class="poster-img">
+            <img src="Bharat%20Bhagya%20Vidheta_jpg.jpg" alt="Bharat Bhagya Viddhaata" class="poster-img">
           </div>
           <span class="badge">FEATURE FILM</span>
           <h4>Bharat Bhagya Viddhaata</h4>
@@ -431,38 +514,53 @@
 
         <div class="card">
           <div class="poster-wrapper">
-            <img src="VVAN%20_JPG.jpg" alt="VVAN Poster" class="poster-img">
+            <img src="VVAN%20_JPG.jpg" alt="VVAN" class="poster-img">
           </div>
           <span class="badge">FEATURE FILM</span>
           <h4>VVAN</h4>
           <p>Force of the Forest</p>
         </div>
 
-        <div class="card upcoming">
-          <span class="badge">UPCOMING</span>
-          <h4>Kabir Khan x Kartik Aaryan Project</h4>
-          <p>Sports Drama / Upcoming</p>
-        </div>
-
-        <div class="card upcoming">
-          <span class="badge">BIOPIC</span>
-          <h4>Dada (Sourav Ganguly Biopic)</h4>
-          <p>Status: Upcoming</p>
+        <div class="card">
+          <div class="poster-wrapper" style="display:flex;align-items:center;justify-content:center;color:#666;">
+            <span>[ Upcoming ]</span>
+          </div>
+          <span class="badge" style="color:#f59e0b;">UPCOMING</span>
+          <h4>Kabir Khan x Kartik Aaryan</h4>
+          <p>Sports Drama</p>
         </div>
 
         <div class="card">
+          <div class="poster-wrapper" style="display:flex;align-items:center;justify-content:center;color:#666;">
+            <span>[ Biopic ]</span>
+          </div>
+          <span class="badge" style="color:#f59e0b;">BIOPIC</span>
+          <h4>Dada (Ganguly Biopic)</h4>
+          <p>Feature Film</p>
+        </div>
+
+        <div class="card">
+          <div class="poster-wrapper" style="display:flex;align-items:center;justify-content:center;color:#666;">
+            <span>[ Feature ]</span>
+          </div>
           <span class="badge">FEATURE FILM</span>
           <h4>Jewel Thief</h4>
-          <p>Siddharth Anand's Production</p>
+          <p>Siddharth Anand Prod.</p>
         </div>
 
         <div class="card">
+          <div class="poster-wrapper" style="display:flex;align-items:center;justify-content:center;color:#666;">
+            <span>[ Feature ]</span>
+          </div>
           <span class="badge">FEATURE FILM</span>
           <h4>Maalik</h4>
           <p>Starring Rajkummar Rao</p>
         </div>
 
         <div class="card">
+          <div class="poster-wrapper" style="display:flex;align-items:center;justify-content:center;color:#666;">
+            <span>[ Feature ]</span>
+          </div>
           <span class="badge">FEATURE FILM</span>
           <h4>Arranged Love</h4>
           <p>Original Movie</p>
@@ -471,62 +569,75 @@
       </div>
     </div>
 
-    <!-- Category 02: Web Series -->
-    <div class="category-item">
-      <div class="category-header">
-        <div>
-          <div class="number">02</div>
-          <div class="category-title">Web Series & OTT</div>
+    <!-- 02 Web Series Slider -->
+    <div class="category-block">
+      <div class="category-top">
+        <div class="cat-info">
+          <span class="number">02</span>
+          <span class="category-title">Web Series & OTT</span>
+        </div>
+        <div class="slider-controls">
+          <button class="nav-btn" onclick="scrollSlider('series-track', -250)">&larr;</button>
+          <button class="nav-btn" onclick="scrollSlider('series-track', 250)">&rarr;</button>
         </div>
       </div>
 
-      <div class="grid">
+      <div class="slider-container" id="series-track">
 
         <div class="card">
           <div class="poster-wrapper">
-            <img src="Black%20Warrant%20_Jpg.jpeg" alt="Black Warrant Poster" class="poster-img">
+            <img src="Black%20Warrant%20_Jpg.jpeg" alt="Black Warrant" class="poster-img">
           </div>
           <span class="badge">NETFLIX</span>
-          <h4>Black Warrant (Season 1)</h4>
-          <p>From Creator of Sacred Games</p>
+          <h4>Black Warrant (S1)</h4>
+          <p>Sacred Games Creator</p>
         </div>
 
         <div class="card">
           <div class="poster-wrapper">
-            <img src="Dabba%20Cartel.jpg.webp" alt="Dabba Cartel Poster" class="poster-img">
+            <img src="Dabba%20Cartel.jpg.webp" alt="Dabba Cartel" class="poster-img">
           </div>
           <span class="badge">NETFLIX</span>
           <h4>Dabba Cartel</h4>
-          <p>Netflix Original Series</p>
-        </div>
-
-        <div class="card upcoming">
-          <span class="badge">NETFLIX</span>
-          <h4>Black Warrant (Season 2)</h4>
-          <p>Status: Upcoming</p>
+          <p>Netflix Original</p>
         </div>
 
         <div class="card">
+          <div class="poster-wrapper" style="display:flex;align-items:center;justify-content:center;color:#666;">
+            <span>[ Season 2 ]</span>
+          </div>
+          <span class="badge" style="color:#f59e0b;">NETFLIX</span>
+          <h4>Black Warrant (S2)</h4>
+          <p>Upcoming Series</p>
+        </div>
+
+        <div class="card">
+          <div class="poster-wrapper" style="display:flex;align-items:center;justify-content:center;color:#666;">
+            <span>[ Mini Series ]</span>
+          </div>
           <span class="badge">AMAZON MINITV</span>
           <h4>Jab We Matched</h4>
           <p>Mini Series</p>
         </div>
 
         <div class="card">
+          <div class="poster-wrapper" style="display:flex;align-items:center;justify-content:center;color:#666;">
+            <span>[ SonyLIV ]</span>
+          </div>
           <span class="badge">SONYLIV</span>
           <h4>Zindaginama</h4>
-          <p>6 Stories of Hope & Strength</p>
+          <p>6 Stories of Hope</p>
         </div>
 
       </div>
     </div>
 
-    <!-- Category 03: Ad Commercials -->
-    <div class="category-item">
-      <div class="category-header">
-        <div>
-          <div class="number">03</div>
-          <div class="category-title">Commercials & Brands</div>
+    <!-- 03 Commercials Tag Cloud -->
+    <div class="category-block">
+      <div class="category-top">
+        <div class="cat-info">
+          <span class="number">03</span>
+          <span class="category-title">Commercials & Brands</span>
         </div>
       </div>
 
@@ -559,11 +670,20 @@
       </div>
     </div>
 
-    <!-- Contact Card -->
+    <!-- Contact Box -->
     <div class="contact-card">
       <h2>For Actors & Profile Submissions</h2>
-      <p class="about-text" style="margin-bottom: 15px;">Send headshots, audition reels, and profiles directly to:</p>
-      <a href="mailto:thatismesatyam@gmail.com">thatismesatyam@gmail.com</a>
+      <p class="about-text" style="margin-bottom: 10px;">Send headshots, profiles, and audition reels to:</p>
+      <a href="mailto:thatismesatyam@gmail.com" class="mail-link">thatismesatyam@gmail.com</a>
+
+      <div class="insta-links-group">
+        <a href="https://instagram.com/satyamjhacastingcompany" target="_blank" class="insta-card-btn">
+          <i class="fa-brands font-awesome-icon fa-instagram"></i> @satyamjhacastingcompany
+        </a>
+        <a href="https://instagram.com/imsatyamjha" target="_blank" class="insta-card-btn">
+          <i class="fa-brands font-awesome-icon fa-instagram"></i> @imsatyamjha
+        </a>
+      </div>
     </div>
 
   </section>
@@ -572,6 +692,14 @@
   <footer>
     <p>&copy; Satyam Jha Casting | Mumbai, India</p>
   </footer>
+
+  <!-- Slider Functionality JS -->
+  <script>
+    function scrollSlider(elementId, amount) {
+      const container = document.getElementById(elementId);
+      container.scrollBy({ left: amount, behavior: 'smooth' });
+    }
+  </script>
 
 </body>
 </html>
