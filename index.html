@@ -38,13 +38,13 @@
             padding-bottom: 0;
         }
 
-        /* HEADER & NAVBAR FIX */
+        /* HEADER & NAVBAR */
         header.navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 18px 6%;
-            background: rgba(255, 255, 255, 0.9);
+            padding: 16px 6%;
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(12px);
             position: sticky;
             top: 0;
@@ -57,10 +57,18 @@
             align-items: center;
         }
 
-        /* Bada aur clear logo visibility */
+        .logo-text {
+            font-family: 'Syne', sans-serif;
+            font-weight: 800;
+            font-size: 1.3rem;
+            letter-spacing: -0.5px;
+            color: #0d0d12;
+            text-transform: uppercase;
+        }
+
         .navbar-logo img {
-            height: 52px;
-            max-height: 52px;
+            height: 48px;
+            max-height: 48px;
             width: auto;
             object-fit: contain;
             display: block;
@@ -240,7 +248,7 @@
 
         .cards-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
             gap: 24px;
         }
 
@@ -320,10 +328,13 @@
             margin: 0 auto;
         }
 
-        .footer-logo img {
-            height: 65px;
-            width: auto;
+        .footer-logo {
             margin-bottom: 20px;
+        }
+
+        .footer-logo img {
+            height: 60px;
+            width: auto;
             object-fit: contain;
         }
 
@@ -390,7 +401,7 @@
 
         @media (max-width: 600px) {
             header.navbar { padding: 14px 4%; }
-            .navbar-logo img { height: 42px; }
+            .navbar-logo img { height: 40px; }
             .cards-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
             .card-details { padding: 12px; }
             .card-details h3 { font-size: 0.92rem; }
@@ -402,8 +413,7 @@
     <!-- NAVBAR HEADER -->
     <header class="navbar">
         <div class="navbar-logo">
-            <!-- Exact Signature Logo Link -->
-            <img src="Black and White Elegant Signature Logo.png" alt="Satyam Jha Logo" onerror="this.onerror=null; this.src='Border 2.jpeg';">
+            <span class="logo-text">Satyam Jha</span>
         </div>
         <div class="nav-links">
             <a href="https://instagram.com" target="_blank" class="nav-btn">Instagram</a>
@@ -425,7 +435,6 @@
     <div class="profile-container">
         <div class="profile-card">
             <div class="profile-avatar-wrapper">
-                <!-- Exact Profile Photo: sat.JPG -->
                 <img src="sat.JPG" alt="Satyam Jha" onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'font-weight:800;font-size:2rem;color:#52525b;\'>SJ</div>';">
             </div>
             <h2 class="profile-name">Satyam Jha</h2>
@@ -468,6 +477,28 @@
                     </div>
                 </div>
 
+                <!-- Card: Border 2 -->
+                <div class="project-card">
+                    <div class="card-img-holder">
+                        <span class="platform-tag">FEATURE FILM</span>
+                        <img src="Border 2.jpeg" alt="Border 2">
+                    </div>
+                    <div class="card-details">
+                        <h3>Border 2</h3>
+                    </div>
+                </div>
+
+                <!-- Card: Azaad -->
+                <div class="project-card">
+                    <div class="card-img-holder">
+                        <span class="platform-tag">FEATURE FILM</span>
+                        <img src="Azaad.jpg" alt="Azaad">
+                    </div>
+                    <div class="card-details">
+                        <h3>Azaad</h3>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -505,11 +536,11 @@
 
     </main>
 
-    <!-- FOOTER WITH LOGO & ENGAGING DETAILS -->
+    <!-- FOOTER -->
     <footer class="site-footer" id="submit">
         <div class="footer-content">
             <div class="footer-logo">
-                <img src="Black and White Elegant Signature Logo.png" alt="Satyam Jha Casting" onerror="this.onerror=null; this.src='Border 2.jpeg';">
+                <span class="logo-text" style="color: #fff; font-size: 1.6rem;">Satyam Jha Casting</span>
             </div>
 
             <p class="footer-tagline">"Discovering raw talent & assembling iconic character ensembles."</p>
