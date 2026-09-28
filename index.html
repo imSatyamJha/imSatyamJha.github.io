@@ -20,7 +20,6 @@
             --radius-main: 24px;
             --radius-card: 18px;
             --shadow-subtle: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
-            --shadow-hover: 0 20px 40px -15px rgba(0, 0, 0, 0.12);
         }
 
         * {
@@ -57,13 +56,13 @@
             align-items: center;
         }
 
-        /* Company Logo Header Styling */
         .navbar-logo img {
             height: 48px;
             max-height: 48px;
             width: auto;
             object-fit: contain;
             display: block;
+            border-radius: 6px;
         }
 
         .logo-fallback-text {
@@ -75,33 +74,158 @@
             text-transform: uppercase;
         }
 
-        .nav-links {
+        .nav-right-actions {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
         }
 
-        .nav-btn {
+        .imdb-btn {
             text-decoration: none;
-            color: var(--text-main);
+            background-color: #f5c518;
+            color: #000;
             font-size: 0.85rem;
-            font-weight: 600;
-            padding: 8px 14px;
+            font-weight: 700;
+            padding: 8px 16px;
             border-radius: 100px;
+            transition: transform 0.2s ease;
+        }
+
+        /* THREE DOTS MENU BUTTON */
+        .dots-menu-btn {
+            background: #f4f4f7;
             border: 1px solid var(--border-color);
-            background: #fff;
+            border-radius: 50%;
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--text-main);
+            user-select: none;
             transition: all 0.2s ease;
         }
 
-        .nav-btn:hover {
-            border-color: #000;
+        .dots-menu-btn:hover {
+            background: #000;
+            color: #fff;
         }
 
-        .nav-btn.imdb {
-            background-color: #f5c518;
-            color: #000;
+        /* NAVIGATION OVERLAY / MENU SLIDE */
+        .nav-overlay {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            max-width: 380px;
+            height: 100vh;
+            background: #ffffff;
+            box-shadow: -10px 0 40px rgba(0,0,0,0.15);
+            z-index: 999;
+            padding: 30px 24px;
+            display: flex;
+            flex-direction: column;
+            transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .nav-overlay.active {
+            right: 0;
+        }
+
+        .overlay-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .overlay-header h3 {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 800;
+        }
+
+        .close-btn {
+            background: #f4f4f7;
             border: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .overlay-links {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .overlay-links a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-size: 1.1rem;
             font-weight: 700;
+            transition: color 0.2s ease;
+        }
+
+        .overlay-links a:hover {
+            color: var(--primary-red);
+        }
+
+        .insta-links-box {
+            margin-top: auto;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .insta-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .insta-btn.personal {
+            background: #fde8e8;
+            color: var(--primary-red);
+        }
+
+        .insta-btn.company {
+            background: #000;
+            color: #fff;
+        }
+
+        .menu-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0,0,0,0.4);
+            z-index: 998;
+            display: none;
+        }
+
+        .menu-backdrop.active {
+            display: block;
         }
 
         /* HERO SECTION */
@@ -362,12 +486,11 @@
             margin-bottom: 20px;
         }
 
-        /* Company Logo Footer Styling */
         .footer-logo img {
             height: 55px;
             width: auto;
             object-fit: contain;
-            filter: brightness(0) invert(1); /* Logo ko dark background pe white karne ke liye */
+            border-radius: 6px;
         }
 
         .footer-tagline {
@@ -436,15 +559,43 @@
     <!-- NAVBAR HEADER -->
     <header class="navbar">
         <div class="navbar-logo">
-            <!-- Exact Company Signature Logo Path -->
-            <img src="Black and White Elegant Signature Logo.png" alt="Satyam Jha Logo" onerror="this.style.display='none'; document.getElementById('hdr-txt').style.display='block';">
+            <img src="Black and White Elegant Signature Photography Logo_20260929_014429_0000.jpg" alt="Satyam Jha Logo" onerror="this.style.display='none'; document.getElementById('hdr-txt').style.display='block';">
             <span id="hdr-txt" class="logo-fallback-text" style="display:none;">Satyam Jha</span>
         </div>
-        <div class="nav-links">
-            <a href="https://instagram.com" target="_blank" class="nav-btn">Instagram</a>
-            <a href="https://imdb.com" target="_blank" class="nav-btn imdb">IMDb</a>
+        
+        <div class="nav-right-actions">
+            <a href="https://imdb.com" target="_blank" class="imdb-btn">IMDb</a>
+            <!-- THREE DOTS MENU BUTTON -->
+            <button class="dots-menu-btn" onclick="toggleMenu()" aria-label="Open Menu">⋮</button>
         </div>
     </header>
+
+    <!-- BACKDROP & POP-UP OVERLAY MENU -->
+    <div class="menu-backdrop" id="menuBackdrop" onclick="toggleMenu()"></div>
+    
+    <nav class="nav-overlay" id="navOverlay">
+        <div class="overlay-header">
+            <h3>Menu</h3>
+            <button class="close-btn" onclick="toggleMenu()">✕</button>
+        </div>
+        
+        <div class="overlay-links">
+            <a href="#about" onclick="toggleMenu()">About Us</a>
+            <a href="#showcase" onclick="toggleMenu()">Our Work</a>
+            <a href="#services" onclick="toggleMenu()">Services</a>
+            <a href="#submit" onclick="toggleMenu()">Contact Us</a>
+            <a href="#submit" onclick="toggleMenu()" style="color: var(--primary-red);">Submit Your Profile</a>
+        </div>
+
+        <div class="insta-links-box">
+            <a href="https://www.instagram.com/imsatyam.jha" target="_blank" class="insta-btn personal">
+                📷 Personal Instagram
+            </a>
+            <a href="https://www.instagram.com/satyamjhacasting" target="_blank" class="insta-btn company">
+                🎬 Company Instagram
+            </a>
+        </div>
+    </nav>
 
     <!-- HERO SECTION -->
     <section class="hero">
@@ -457,7 +608,7 @@
     </section>
 
     <!-- PROFILE BIO SECTION -->
-    <div class="profile-container">
+    <div class="profile-container" id="about">
         <div class="profile-card">
             <div class="profile-avatar-wrapper">
                 <img src="sat.JPG" alt="Satyam Jha" onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'font-weight:800;font-size:2rem;color:#52525b;\'>SJ</div>';">
@@ -528,82 +679,4 @@
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- SERIES & OTT SLIDER -->
-        <section>
-            <div class="section-header">
-                <h2><span class="section-number">02</span> Series & OTT</h2>
-                <div class="slider-controls">
-                    <button class="arrow-btn" onclick="scrollSlider('series-slider', -280)">←</button>
-                    <button class="arrow-btn" onclick="scrollSlider('series-slider', 280)">→</button>
-                </div>
-            </div>
-
-            <div class="cards-slider" id="series-slider">
-                <!-- Black Warrant -->
-                <div class="project-card">
-                    <div class="card-img-holder">
-                        <img src="Black Warrant.Jpg.jpeg" alt="Black Warrant">
-                        <span class="platform-tag" style="background:#e50914; color:#fff;">Netflix</span>
-                    </div>
-                    <div class="card-details">
-                        <h3>Black Warrant (S1)</h3>
-                    </div>
-                </div>
-
-                <!-- Dabba Cartel -->
-                <div class="project-card">
-                    <div class="card-img-holder">
-                        <img src="Dabba Cartel.jpg.webp" alt="Dabba Cartel">
-                        <span class="platform-tag" style="background:#e50914; color:#fff;">Netflix</span>
-                    </div>
-                    <div class="card-details">
-                        <h3>Dabba Cartel</h3>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="site-footer" id="submit">
-        <div class="footer-logo">
-            <img src="Black and White Elegant Signature Logo.png" alt="Satyam Jha Casting Logo" onerror="this.style.display='none'; document.getElementById('ftr-txt').style.display='block';">
-            <span id="ftr-txt" class="logo-fallback-text" style="display:none; color:#fff; font-size:1.5rem;">Satyam Jha Casting</span>
-        </div>
-        <p class="footer-tagline">"Discovering raw talent & assembling iconic character ensembles."</p>
-
-        <div class="footer-stats-grid">
-            <div class="stat-card">
-                <div class="stat-val">6+</div>
-                <div class="stat-lbl">Years Exp.</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-val">OTT & Films</div>
-                <div class="stat-lbl">Major Releases</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-val">Mumbai</div>
-                <div class="stat-lbl">Industry Hub</div>
-            </div>
-        </div>
-
-        <a href="mailto:thatismesatyam@gmail.com" class="footer-cta-btn">Submit Profile / Contact Us</a>
-
-        <p class="copyright-text">© Satyam Jha Casting. All Rights Reserved.</p>
-    </footer>
-
-    <!-- SLIDER SCRIPT -->
-    <script>
-        function scrollSlider(id, amount) {
-            document.getElementById(id).scrollBy({
-                left: amount,
-                behavior: 'smooth'
-            });
-        }
-    </script>
-
-</body>
-</html>
+        </section
