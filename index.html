@@ -41,13 +41,13 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 14px 5%;
-            background: rgba(255, 255, 255, 0.95);
+            padding: 16px 5%;
+            background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(12px);
             position: sticky;
             top: 0;
             z-index: 100;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
+            border-bottom: 1px solid rgba(0,0,0,0.06);
         }
 
         .navbar-logo {
@@ -56,7 +56,7 @@
         }
 
         .navbar-logo img {
-            width: 140px;
+            width: 150px;
             height: auto;
             object-fit: contain;
             display: block;
@@ -66,11 +66,10 @@
             font-family: 'Syne', sans-serif;
             font-weight: 800;
             font-size: 1.4rem;
-            color: var(--primary-red);
-            text-transform: uppercase;
+            color: var(--text-main);
+            letter-spacing: -0.5px;
         }
 
-        /* TOP RIGHT ACTION PILLS (Co, Self, IMDb) */
         .nav-pills {
             display: flex;
             align-items: center;
@@ -83,7 +82,7 @@
             color: var(--text-main);
             font-size: 0.8rem;
             font-weight: 700;
-            padding: 7px 14px;
+            padding: 8px 14px;
             border-radius: 100px;
             border: 1px solid var(--border-color);
             display: flex;
@@ -191,7 +190,6 @@
             margin-bottom: 16px;
         }
 
-        /* BOLD & RED EXPERIENCE HIGHLIGHT */
         .profile-bio {
             color: var(--text-muted);
             font-size: 0.95rem;
@@ -282,8 +280,11 @@
         .card-img-holder {
             width: 100%;
             aspect-ratio: 2 / 3;
-            background: #e4e4e7;
+            background: #f4f4f7;
             position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .card-img-holder img {
@@ -305,6 +306,7 @@
             padding: 4px 10px;
             border-radius: 6px;
             text-transform: uppercase;
+            z-index: 2;
         }
 
         .card-details {
@@ -327,20 +329,21 @@
 
         .brands-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 16px;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 12px;
             margin-top: 25px;
         }
 
         .brand-box {
             background: #fff;
-            padding: 20px;
+            padding: 16px 12px;
             border-radius: 12px;
             border: 1px solid var(--border-color);
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: 700;
+            font-size: 0.85rem;
             color: var(--text-muted);
             box-shadow: var(--shadow-subtle);
         }
@@ -359,7 +362,7 @@
             width: 140px;
             height: auto;
             object-fit: contain;
-            margin-bottom: 15px;
+            margin-bottom: 18px;
         }
 
         .footer-tagline {
@@ -387,7 +390,7 @@
         }
 
         @media (max-width: 600px) {
-            .navbar-logo img { width: 115px; }
+            .navbar-logo img { width: 130px; }
             .project-card { min-width: 220px; max-width: 220px; }
             .section-header h2 { font-size: 1.3rem; }
             .nav-pills { gap: 6px; }
@@ -400,7 +403,7 @@
     <!-- NAVBAR HEADER -->
     <header class="navbar">
         <div class="navbar-logo">
-            <img src="Black and White Elegant Signature Photography Logo_20260929_014429_0000.jpg" alt="Satyam Jha Logo" onerror="this.style.display='none'; document.getElementById('hdr-txt').style.display='block';">
+            <img src="logo.jpg" alt="Satyam Jha Casting" onerror="this.style.display='none'; document.getElementById('hdr-txt').style.display='block';">
             <span id="hdr-txt" class="logo-fallback-text" style="display:none;">Satyam Jha</span>
         </div>
         
@@ -427,7 +430,7 @@
     <div class="profile-container" id="about">
         <div class="profile-card">
             <div class="profile-avatar-wrapper">
-                <img src="sat.JPG" alt="Satyam Jha" onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'font-weight:800;font-size:2rem;color:#52525b;\'>SJ</div>';">
+                <img src="sat.JPG" alt="Satyam Jha" onerror="this.onerror=null; this.src='sat.jpg'; this.onerror=function(){this.parentElement.innerHTML='<div style=\'font-weight:800;font-size:2rem;color:#52525b;\'>SJ</div>';};">
             </div>
             <h2 class="profile-name">Satyam Jha</h2>
             <div class="profile-title-sub">Casting Director</div>
@@ -439,10 +442,10 @@
 
     <!-- WORK SHOWCASE SECTION -->
     <main class="showcase" id="showcase">
-        <!-- FEATURE FILMS -->
+        <!-- FEATURE FILMS & SERIES (COLLECTION 1) -->
         <section style="margin-bottom: 50px;">
             <div class="section-header">
-                <h2>Feature Films</h2>
+                <h2>Feature Films & Series</h2>
                 <div class="slider-controls">
                     <button class="arrow-btn" onclick="scrollSlider('films-slider', -280)">←</button>
                     <button class="arrow-btn" onclick="scrollSlider('films-slider', 280)">→</button>
@@ -460,10 +463,10 @@
 
                 <div class="project-card">
                     <div class="card-img-holder">
-                        <img src="Azaad.jpg" alt="Azaad">
-                        <span class="platform-tag">Feature Film</span>
+                        <img src="Black Warrant.Jpg.jpeg" alt="Black Warrant">
+                        <span class="platform-tag" style="background:#e50914; color:#fff;">Netflix</span>
                     </div>
-                    <div class="card-details"><h3>Azaad</h3></div>
+                    <div class="card-details"><h3>Black Warrant</h3></div>
                 </div>
 
                 <div class="project-card">
@@ -476,12 +479,41 @@
 
                 <div class="project-card">
                     <div class="card-img-holder">
+                        <img src="Azaad.jpg" alt="Azaad">
+                        <span class="platform-tag">Feature Film</span>
+                    </div>
+                    <div class="card-details"><h3>Azaad</h3></div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-img-holder">
                         <img src="Maalik.jpg" alt="Maalik">
                         <span class="platform-tag">Feature Film</span>
                     </div>
                     <div class="card-details"><h3>Maalik</h3></div>
                 </div>
 
+                <div class="project-card">
+                    <div class="card-img-holder">
+                        <img src="Dabba Cartel.jpg.webp" alt="Dabba Cartel">
+                        <span class="platform-tag" style="background:#e50914; color:#fff;">Netflix</span>
+                    </div>
+                    <div class="card-details"><h3>Dabba Cartel</h3></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MORE PROJECTS (COLLECTION 2) -->
+        <section id="services">
+            <div class="section-header">
+                <h2>OTT, Shows & Dramas</h2>
+                <div class="slider-controls">
+                    <button class="arrow-btn" onclick="scrollSlider('series-slider', -280)">←</button>
+                    <button class="arrow-btn" onclick="scrollSlider('series-slider', 280)">→</button>
+                </div>
+            </div>
+
+            <div class="cards-slider" id="series-slider">
                 <div class="project-card">
                     <div class="card-img-holder">
                         <img src="Bharat Bhagya Vidhata.Jpg.jpg" alt="Bharat Bhagya Vidhata">
@@ -492,39 +524,18 @@
 
                 <div class="project-card">
                     <div class="card-img-holder">
-                        <img src="VVAN.JPG.jpg" alt="VVAN">
+                        <img src="VVAN_JPG.jpg" alt="VVAN">
                         <span class="platform-tag">Feature Film</span>
                     </div>
                     <div class="card-details"><h3>VVAN</h3></div>
                 </div>
-            </div>
-        </section>
-
-        <!-- SERIES & OTT -->
-        <section id="services">
-            <div class="section-header">
-                <h2>Series & OTT</h2>
-                <div class="slider-controls">
-                    <button class="arrow-btn" onclick="scrollSlider('series-slider', -280)">←</button>
-                    <button class="arrow-btn" onclick="scrollSlider('series-slider', 280)">→</button>
-                </div>
-            </div>
-
-            <div class="cards-slider" id="series-slider">
-                <div class="project-card">
-                    <div class="card-img-holder">
-                        <img src="Black Warrant.Jpg.jpeg" alt="Black Warrant">
-                        <span class="platform-tag" style="background:#e50914; color:#fff;">Netflix</span>
-                    </div>
-                    <div class="card-details"><h3>Black Warrant</h3></div>
-                </div>
 
                 <div class="project-card">
                     <div class="card-img-holder">
-                        <img src="Dabba Cartel.jpg" alt="Dabba Cartel">
-                        <span class="platform-tag" style="background:#e50914; color:#fff;">Netflix</span>
+                        <img src="Next Schedule.jpg" alt="Next Schedule">
+                        <span class="platform-tag">Sports Drama</span>
                     </div>
-                    <div class="card-details"><h3>Dabba Cartel</h3></div>
+                    <div class="card-details"><h3>Next Schedule</h3></div>
                 </div>
 
                 <div class="project-card">
@@ -543,16 +554,4 @@
                     <div class="card-details"><h3>Jab We Matched</h3></div>
                 </div>
 
-                <div class="project-card">
-                    <div class="card-img-holder">
-                        <img src="Zindagi Naagin.jpg" alt="Zindagi Naagin">
-                        <span class="platform-tag">Sony LIV</span>
-                    </div>
-                    <div class="card-details"><h3>Zindagi Naagin</h3></div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- BRANDS SECTION -->
-    <section class="bran
+     
