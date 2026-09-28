@@ -57,10 +57,10 @@
             align-items: center;
         }
 
-        /* Fixed Header Logo Visibility */
+        /* Bada aur clear logo visibility */
         .navbar-logo img {
-            height: 48px;
-            max-height: 48px;
+            height: 52px;
+            max-height: 52px;
             width: auto;
             object-fit: contain;
             display: block;
@@ -276,26 +276,6 @@
             display: block;
         }
 
-        /* Fallback text UI when poster image broken */
-        .card-img-fallback {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, #1f1f23 0%, #0d0d12 100%);
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .card-img-fallback span {
-            font-family: 'Syne', sans-serif;
-            font-size: 1.2rem;
-            font-weight: 700;
-        }
-
         .platform-tag {
             position: absolute;
             top: 12px;
@@ -325,7 +305,7 @@
             color: var(--text-main);
         }
 
-        /* FOOTER BRANDING & DETAILS */
+        /* FOOTER BRANDING */
         .site-footer {
             background-color: #0b0b0e;
             color: #ffffff;
@@ -410,7 +390,7 @@
 
         @media (max-width: 600px) {
             header.navbar { padding: 14px 4%; }
-            .navbar-logo img { height: 38px; }
+            .navbar-logo img { height: 42px; }
             .cards-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
             .card-details { padding: 12px; }
             .card-details h3 { font-size: 0.92rem; }
@@ -422,7 +402,8 @@
     <!-- NAVBAR HEADER -->
     <header class="navbar">
         <div class="navbar-logo">
-            <img src="images/logo.png" alt="Satyam Jha Logo" onerror="this.onerror=null; this.src='images/logo.jpg';">
+            <!-- Exact Signature Logo Link -->
+            <img src="Black and White Elegant Signature Logo.png" alt="Satyam Jha Logo" onerror="this.onerror=null; this.src='Border 2.jpeg';">
         </div>
         <div class="nav-links">
             <a href="https://instagram.com" target="_blank" class="nav-btn">Instagram</a>
@@ -444,7 +425,8 @@
     <div class="profile-container">
         <div class="profile-card">
             <div class="profile-avatar-wrapper">
-                <img src="images/satyam-photo.jpg" alt="Satyam Jha" onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'font-weight:800;font-size:2rem;color:#52525b;\'>SJ</div>';">
+                <!-- Exact Profile Photo: sat.JPG -->
+                <img src="sat.JPG" alt="Satyam Jha" onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'font-weight:800;font-size:2rem;color:#52525b;\'>SJ</div>';">
             </div>
             <h2 class="profile-name">Satyam Jha</h2>
             <div class="profile-title-sub">Casting Director</div>
@@ -468,10 +450,7 @@
                 <div class="project-card">
                     <div class="card-img-holder">
                         <span class="platform-tag">FEATURE FILM</span>
-                        <img src="images/bharat-bhagya.jpg" alt="Bharat Bhagya Viddhaata" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="card-img-fallback" style="display:none;">
-                            <span>Bharat Bhagya Viddhaata</span>
-                        </div>
+                        <img src="Bharat Bhagya Vidhata.Jpg.jpg" alt="Bharat Bhagya Viddhaata">
                     </div>
                     <div class="card-details">
                         <h3>Bharat Bhagya Viddhaata</h3>
@@ -482,10 +461,7 @@
                 <div class="project-card">
                     <div class="card-img-holder">
                         <span class="platform-tag">FEATURE FILM</span>
-                        <img src="images/vvan.jpg" alt="VVAN" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="card-img-fallback" style="display:none;">
-                            <span>VVAN</span>
-                        </div>
+                        <img src="VVAN.JPG.jpg" alt="VVAN">
                     </div>
                     <div class="card-details">
                         <h3>VVAN</h3>
@@ -506,24 +482,18 @@
                 <div class="project-card">
                     <div class="card-img-holder">
                         <span class="platform-tag netflix">NETFLIX</span>
-                        <img src="images/black-warrant.jpg" alt="Black Warrant" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="card-img-fallback" style="display:none;">
-                            <span>Black Warrant (S1)</span>
-                        </div>
+                        <img src="Black Warrant.Jpg.jpeg" alt="Black Warrant">
                     </div>
                     <div class="card-details">
                         <h3>Black Warrant (S1)</h3>
                     </div>
                 </div>
 
-                <!-- Card: Dabba Cartel (NEWLY ADDED) -->
+                <!-- Card: Dabba Cartel -->
                 <div class="project-card">
                     <div class="card-img-holder">
                         <span class="platform-tag netflix">NETFLIX</span>
-                        <img src="images/dabba-cartel.jpg" alt="Dabba Cartel" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="card-img-fallback" style="display:none;">
-                            <span>Dabba Cartel</span>
-                        </div>
+                        <img src="Dabba Cartel.jpg.webp" alt="Dabba Cartel">
                     </div>
                     <div class="card-details">
                         <h3>Dabba Cartel</h3>
@@ -539,7 +509,7 @@
     <footer class="site-footer" id="submit">
         <div class="footer-content">
             <div class="footer-logo">
-                <img src="images/logo.png" alt="Satyam Jha Casting" onerror="this.onerror=null; this.src='images/logo.jpg';">
+                <img src="Black and White Elegant Signature Logo.png" alt="Satyam Jha Casting" onerror="this.onerror=null; this.src='Border 2.jpeg';">
             </div>
 
             <p class="footer-tagline">"Discovering raw talent & assembling iconic character ensembles."</p>
