@@ -71,6 +71,7 @@
 
         .hero-img-container {
             flex: 0 0 320px;
+            text-align: center;
         }
 
         .hero-img-container img {
@@ -80,6 +81,22 @@
             border-radius: 12px;
             border: 2px solid #333;
             box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+        }
+
+        .hero-photo-caption {
+            margin-top: 15px;
+        }
+
+        .hero-photo-caption h3 {
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            margin-bottom: 3px;
+        }
+
+        .hero-photo-caption p {
+            font-size: 0.95rem;
+            color: var(--accent);
+            font-weight: 500;
         }
 
         .hero-badge {
@@ -288,7 +305,7 @@
         </nav>
     </header>
 
-    <!-- Hero Section with Photo -->
+    <!-- Hero Section with Photo and Name Caption -->
     <section class="hero" id="about">
         <div class="hero-content">
             <div class="hero-badge">6 Years of Industry Experience</div>
@@ -301,6 +318,10 @@
         </div>
         <div class="hero-img-container">
             <img src="sat.JPG" alt="Satyam Jha">
+            <div class="hero-photo-caption">
+                <h3>Satyam Jha</h3>
+                <p>Casting Director</p>
+            </div>
         </div>
     </section>
 
