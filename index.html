@@ -38,11 +38,9 @@
             border-bottom: 1px solid #222;
         }
 
-        .logo {
-            font-size: 1.2rem;
-            font-weight: bold;
-            letter-spacing: 2px;
-            text-transform: uppercase;
+        .logo-img {
+            height: 40px;
+            object-fit: contain;
         }
 
         nav a {
@@ -58,8 +56,30 @@
         }
 
         .hero {
-            padding: 80px 5% 50px 5%;
-            max-width: 900px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 5%;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .hero-img-container {
+            flex: 0 0 320px;
+        }
+
+        .hero-img-container img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 2px solid #333;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.7);
         }
 
         .hero-badge {
@@ -83,7 +103,6 @@
             font-size: 1.1rem;
             color: var(--text-secondary);
             margin-bottom: 30px;
-            max-width: 700px;
         }
 
         .btn-group a {
@@ -118,6 +137,8 @@
 
         .projects-section {
             padding: 40px 5%;
+            max-width: 1400px;
+            margin: 0 auto;
         }
 
         .projects-section h2.section-title {
@@ -236,12 +257,30 @@
             font-size: 0.85rem;
             color: #555;
         }
+
+        @media(max-width: 850px) {
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+            .hero-img-container {
+                margin: 0 auto;
+            }
+            .projects-section h2.section-title {
+                border-left: none;
+                padding-left: 0;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
 
+    <!-- Header with Logo -->
     <header>
-        <div class="logo">Satyam Jha</div>
+        <div class="logo">
+            <img src="Black and White Elegant Signature Photography Logo_20260929_014429_0000.jpg" alt="Satyam Jha Logo" class="logo-img">
+        </div>
         <nav>
             <a href="#about">About</a>
             <a href="#works">Works</a>
@@ -249,35 +288,50 @@
         </nav>
     </header>
 
+    <!-- Hero Section with Photo -->
     <section class="hero" id="about">
-        <div class="hero-badge">6 Years of Industry Experience</div>
-        <h1>Shaping Stories, Finding Faces.</h1>
-        <p>Professional Casting Director with 6 years of dedicated experience in bringing authentic characters to life across films and digital projects.</p>
-        <div class="btn-group">
-            <a href="#works" class="btn-primary">View Portfolio</a>
-            <a href="#contact" class="btn-secondary">Get in Touch</a>
+        <div class="hero-content">
+            <div class="hero-badge">6 Years of Industry Experience</div>
+            <h1>Shaping Stories, Finding Faces.</h1>
+            <p>Professional Casting Director with 6 years of dedicated experience in bringing authentic characters to life across films and digital projects.</p>
+            <div class="btn-group">
+                <a href="#works" class="btn-primary">View Portfolio</a>
+                <a href="#contact" class="btn-secondary">Get in Touch</a>
+            </div>
+        </div>
+        <div class="hero-img-container">
+            <img src="sat.JPG" alt="Satyam Jha">
         </div>
     </section>
 
+    <!-- Works Section with Categories & Sliding Effect -->
     <section class="projects-section" id="works">
         <h2 class="section-title">Featured Works & Posters</h2>
         <p style="color: var(--text-secondary); margin-top: 5px; margin-bottom: 30px;">A showcase of projects and design concepts handled.</p>
 
+        <!-- Feature Films Category -->
         <div class="project-category">
             <h3>Feature Films</h3>
             <div class="slider-container">
                 <div class="slider-track">
                     <div class="slide-card">
-                        <img src="azaad.jpg" alt="Azaad">
+                        <img src="Azaad.jpg" alt="Azaad">
                         <div class="card-content">
                             <h4>Azaad</h4>
                             <p>Casting Project</p>
                         </div>
                     </div>
                     <div class="slide-card">
-                        <img src="bharatbhagyavidhata.jpg" alt="Bharat Bhagya Vidhata">
+                        <img src="Bharat Bhagya Vidhata.Jpg.jpg" alt="Bharat Bhagya Vidhata">
                         <div class="card-content">
                             <h4>Bharat Bhagya Vidhata</h4>
+                            <p>Casting Project</p>
+                        </div>
+                    </div>
+                    <div class="slide-card">
+                        <img src="Border 2.jpeg" alt="Border 2">
+                        <div class="card-content">
+                            <h4>Border 2</h4>
                             <p>Casting Project</p>
                         </div>
                     </div>
@@ -285,26 +339,27 @@
             </div>
         </div>
 
+        <!-- Web Series & Digital Category -->
         <div class="project-category">
             <h3>Web Series & Digital</h3>
             <div class="slider-container">
                 <div class="slider-track">
                     <div class="slide-card">
-                        <img src="blackwarrant.jpg" alt="Black Warrant">
+                        <img src="Black Warrant.Jpg.jpeg" alt="Black Warrant">
                         <div class="card-content">
                             <h4>Black Warrant</h4>
                             <p>Casting Project</p>
                         </div>
                     </div>
                     <div class="slide-card">
-                        <img src="dabbacartel.jpg" alt="Dabba Cartel">
+                        <img src="Dabba Cartel.jpg.webp" alt="Dabba Cartel">
                         <div class="card-content">
                             <h4>Dabba Cartel</h4>
                             <p>Casting Project</p>
                         </div>
                     </div>
                     <div class="slide-card">
-                        <img src="vvan.jpg" alt="VVAN">
+                        <img src="VVAN.JPG.jpg" alt="VVAN">
                         <div class="card-content">
                             <h4>VVAN</h4>
                             <p>Casting Project</p>
@@ -315,6 +370,7 @@
         </div>
     </section>
 
+    <!-- Contact Section -->
     <footer id="contact">
         <h3>Let's Collaborate</h3>
         <p>Looking for casting requirements, auditions, or professional discussions? Reach out directly.</p>
