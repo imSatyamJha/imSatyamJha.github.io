@@ -4,516 +4,157 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Satyam Jha | Casting Director</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --bg-color: #fafafa;
-            --card-bg: #ffffff;
-            --text-main: #0a0a0c;
-            --text-muted: #52525b;
-            --primary-red: #e50914;
-            --red-soft: #fde8e8;
-            --border-color: #e4e4e7;
-            --radius-main: 24px;
-            --radius-card: 18px;
-            --shadow-subtle: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.5;
-        }
-
-        /* HEADER NAVBAR */
-        header.navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 12px 3%;
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(12px);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            border-bottom: 1px solid rgba(0,0,0,0.06);
-            gap: 6px;
-        }
-
-        .navbar-logo {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            gap: 8px;
-        }
-
-        .logo-mark {
-            background: var(--text-main);
-            color: #fff;
-            width: 32px;
-            height: 32px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Syne', sans-serif;
-            font-weight: 800;
-            font-size: 0.9rem;
-        }
-
-        .logo-text-group {
-            display: flex;
-            flex-direction: column;
-            line-height: 1.1;
-        }
-
-        .logo-main-text {
-            font-family: 'Syne', sans-serif;
-            font-weight: 800;
-            font-size: 0.95rem;
-            color: var(--text-main);
-            letter-spacing: -0.5px;
-        }
-
-        .logo-sub-text {
-            font-size: 0.6rem;
-            font-weight: 700;
-            color: var(--primary-red);
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .nav-pills {
-            display: flex;
-            align-items: center;
-            gap: 4px;
-            flex-shrink: 0;
-        }
-
-        .pill-btn {
-            text-decoration: none;
-            background: #ffffff;
-            color: var(--text-main);
-            font-size: 0.7rem;
-            font-weight: 700;
-            padding: 6px 10px;
-            border-radius: 100px;
-            border: 1px solid var(--border-color);
-            display: flex;
-            align-items: center;
-            gap: 4px;
-            white-space: nowrap;
-        }
-
-        .pill-btn svg {
-            width: 12px;
-            height: 12px;
-            fill: currentColor;
-        }
-
-        .pill-btn.imdb {
-            background-color: #f5c518;
-            color: #000000;
-            border-color: #f5c518;
-        }
-
-        /* HERO SECTION */
-        .hero {
-            text-align: center;
-            padding: 40px 20px 20px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .hero-badge {
-            display: inline-block;
-            background: var(--red-soft);
-            color: var(--primary-red);
-            font-size: 0.75rem;
-            font-weight: 800;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            padding: 8px 18px;
-            border-radius: 100px;
-            margin-bottom: 16px;
-        }
-
-        .hero-title {
-            font-family: 'Syne', sans-serif;
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            font-weight: 800;
-            line-height: 1.1;
-            letter-spacing: -1px;
-            margin-bottom: 20px;
-            color: #0d0d12;
-        }
-
-        /* PROFILE BIO SECTION */
-        .profile-container {
-            max-width: 700px;
-            margin: 10px auto 50px;
-            padding: 0 20px;
-        }
-
-        .profile-card {
-            background: var(--card-bg);
-            border-radius: var(--radius-main);
-            padding: 35px 25px;
-            text-align: center;
-            box-shadow: var(--shadow-subtle);
-            border: 1px solid #f0f0f4;
-        }
-
-        .profile-avatar-wrapper {
-            width: 110px;
-            height: 110px;
-            margin: 0 auto 18px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 4px solid #fff;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-            background: #f4f4f7;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .profile-avatar-wrapper img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .profile-name {
-            font-family: 'Syne', sans-serif;
-            font-size: 1.8rem;
-            font-weight: 800;
-            margin-bottom: 2px;
-        }
-
-        .profile-title-sub {
-            color: var(--primary-red);
-            font-weight: 800;
-            font-size: 0.8rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 16px;
-        }
-
-        .profile-bio {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            line-height: 1.65;
-            max-width: 540px;
-            margin: 0 auto;
-        }
-
-        .profile-bio strong {
-            color: var(--primary-red);
-            font-weight: 800;
-            font-size: 1.05rem;
-        }
-
-        /* SHOWCASE SECTION WITH SLIDER */
-        .showcase {
-            max-width: 1100px;
-            margin: 0 auto 80px;
-            padding: 0 20px;
-        }
-
-        .section-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .section-header h2 {
-            font-family: 'Syne', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 800;
-        }
-
-        .slider-controls {
-            display: flex;
-            gap: 8px;
-        }
-
-        .arrow-btn {
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            border: 1px solid var(--border-color);
-            background: #fff;
-            color: var(--text-main);
-            font-size: 1.1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-
-        .arrow-btn:hover {
-            background: var(--primary-red);
-            color: #fff;
-            border-color: var(--primary-red);
-        }
-
-        .cards-slider {
-            display: flex;
-            gap: 20px;
-            overflow-x: auto;
-            scroll-behavior: smooth;
-            padding: 10px 5px 25px;
-            scrollbar-width: none;
-        }
-
-        .cards-slider::-webkit-scrollbar { display: none; }
-
-        .project-card {
-            min-width: 260px;
-            max-width: 260px;
-            background: var(--card-bg);
-            border-radius: var(--radius-card);
-            overflow: hidden;
-            box-shadow: var(--shadow-subtle);
-            border: 1px solid #f0f0f4;
-            flex-shrink: 0;
-            transition: transform 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .card-img-holder {
-            width: 100%;
-            aspect-ratio: 2 / 3;
-            background: #f4f4f7;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .card-img-holder img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        .platform-tag {
-            position: absolute;
-            bottom: 12px;
-            left: 12px;
-            background: var(--red-soft);
-            color: var(--primary-red);
-            font-size: 0.65rem;
-            font-weight: 800;
-            letter-spacing: 1px;
-            padding: 4px 10px;
-            border-radius: 6px;
-            text-transform: uppercase;
-            z-index: 2;
-        }
-
-        .card-details {
-            padding: 16px;
-        }
-
-        .card-details h3 {
-            font-size: 1rem;
-            font-weight: 700;
-            color: var(--text-main);
-        }
-
-        /* BRANDS SECTION */
-        .brands-section {
-            max-width: 1100px;
-            margin: 0 auto 80px;
-            padding: 0 20px;
-            text-align: center;
-        }
-
-        .brands-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-            gap: 12px;
-            margin-top: 25px;
-        }
-
-        .brand-box {
-            background: #fff;
-            padding: 16px 12px;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            box-shadow: var(--shadow-subtle);
-        }
-
-        /* FOOTER */
-        .site-footer {
-            background-color: #0b0b0e;
-            color: #ffffff;
-            padding: 60px 20px 40px;
-            text-align: center;
-            margin-top: 80px;
-            border-top: 4px solid var(--primary-red);
-        }
-
-        .footer-logo {
-            font-family: 'Syne', sans-serif;
-            font-size: 1.3rem;
-            font-weight: 800;
-            margin-bottom: 10px;
-            color: #fff;
-        }
-
-        .footer-tagline {
-            font-size: 0.95rem;
-            color: #a1a1aa;
-            margin-bottom: 25px;
-            font-style: italic;
-        }
-
-        .footer-cta-btn {
-            display: inline-block;
-            background: var(--primary-red);
-            color: #fff;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 0.9rem;
-            padding: 12px 28px;
-            border-radius: 100px;
-        }
-
-        .copyright-text {
-            margin-top: 40px;
-            font-size: 0.78rem;
-            color: #52525b;
-        }
-    </style>
+    <!-- Tailwind CSS for modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body class="bg-zinc-950 text-zinc-100 font-sans antialiased selection:bg-red-600 selection:text-white">
 
-    <!-- NAVBAR HEADER -->
-    <header class="navbar">
-        <a href="#" class="navbar-logo">
-            <div class="logo-mark">SJ</div>
-            <div class="logo-text-group">
-                <span class="logo-main-text">Satyam Jha</span>
-                <span class="logo-sub-text">Casting</span>
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-zinc-950/80 backdrop-blur-md border-b border-zinc-800">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <span class="text-xl font-bold tracking-wider uppercase text-red-500">Satyam Jha</span>
+                <span class="text-xs text-zinc-400 border-l border-zinc-700 pl-3">Casting Director</span>
             </div>
-        </a>
-        
-        <div class="nav-pills">
-            <a href="https://www.instagram.com/satyamjhacastingcompany" target="_blank" class="pill-btn">Co.</a>
-            <a href="https://www.instagram.com/imsatyamjha" target="_blank" class="pill-btn">Self</a>
-            <a href="https://www.imdb.com/name/nm11658104/" target="_blank" class="pill-btn imdb">IMDb</a>
+            <nav class="hidden md:flex space-x-8 text-sm font-medium text-zinc-300">
+                <a href="#about" class="hover:text-red-500 transition">About</a>
+                <a href="#projects" class="hover:text-red-500 transition">Works & Posters</a>
+                <a href="#contact" class="hover:text-red-500 transition">Contact</a>
+            </nav>
         </div>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <span class="hero-badge">Casting Director</span>
-        <h1 class="hero-title">The Future Of Casting Is Here</h1>
-    </section>
-
-    <!-- PROFILE BIO SECTION -->
-    <div class="profile-container" id="about">
-        <div class="profile-card">
-            <div class="profile-avatar-wrapper">
-                <img src="sat.jpg" alt="Satyam Jha" onerror="this.onerror=null; this.src='sat.JPG'; this.onerror=function(){this.parentElement.innerHTML='<div style=\'font-weight:800;font-size:2rem;color:#52525b;\'>SJ</div>';};">
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 md:pt-44 md:pb-32 px-6 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
+        <div class="flex-1 space-y-6">
+            <div class="inline-flex items-center space-x-2 bg-red-500/10 border border-red-500/20 px-3 py-1 rounded-full text-red-400 text-xs font-semibold">
+                <i class="fa-solid fa-film"></i>
+                <span>6 Years of Industry Experience</span>
             </div>
-            <h2 class="profile-name">Satyam Jha</h2>
-            <div class="profile-title-sub">Casting Director</div>
-            <p class="profile-bio">
-                Mumbai-based Casting Director with <strong>6+ years of industry experience</strong> in discovering and assembling talent for Feature Films, High-End OTT Web Series, and Commercials.
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">
+                Shaping Stories, <br><span class="text-red-600">Finding Faces.</span>
+            </h1>
+            <p class="text-zinc-400 text-lg max-w-xl">
+                Professional Casting Director with 6 years of dedicated experience in bringing authentic characters to life across films and digital projects.
             </p>
+            <div class="pt-4 flex items-center space-x-4">
+                <a href="#projects" class="bg-red-600 hover:bg-red-700 text-white font-medium px-6 py-3 rounded-lg transition shadow-lg shadow-red-600/20">
+                    View Portfolio
+                </a>
+                <a href="#contact" class="border border-zinc-700 hover:border-zinc-500 text-zinc-300 font-medium px-6 py-3 rounded-lg transition">
+                    Get in Touch
+                </a>
+            </div>
         </div>
-    </div>
-
-    <!-- WORK SHOWCASE SECTION -->
-    <main class="showcase" id="showcase">
-        <section style="margin-bottom: 50px;">
-            <div class="section-header">
-                <h2>Feature Films & Series</h2>
-                <div class="slider-controls">
-                    <button class="arrow-btn" onclick="scrollSlider('films-slider', -280)">←</button>
-                    <button class="arrow-btn" onclick="scrollSlider('films-slider', 280)">→</button>
-                </div>
+        
+        <!-- Logo Display -->
+        <div class="flex-1 flex justify-center">
+            <div class="bg-zinc-900 border border-zinc-800 p-6 rounded-2xl shadow-2xl max-w-sm w-full">
+                <!-- Using your logo file -->
+                <img src="1002739564.jpg" alt="Satyam Jha Casting Logo" class="w-full h-auto rounded-lg object-contain">
             </div>
-            
-            <div class="cards-slider" id="films-slider">
-                <div class="project-card"><div class="card-img-holder"><img src="Border 2.jpeg" alt="Border 2"><span class="platform-tag">Feature Film</span></div><div class="card-details"><h3>Border 2</h3></div></div>
-                <div class="project-card"><div class="card-img-holder"><img src="Black Warrant.Jpg.jpeg" alt="Black Warrant"><span class="platform-tag" style="background:#e50914; color:#fff;">Netflix</span></div><div class="card-details"><h3>Black Warrant</h3></div></div>
-                <div class="project-card"><div class="card-img-holder"><img src="Jewel Thief.jpg" alt="Jewel Thief"><span class="platform-tag" style="background:#e50914; color:#fff;">Netflix</span></div><div class="card-details"><h3>Jewel Thief</h3></div></div>
-                <div class="project-card"><div class="card-img-holder"><img src="Azaad.jpg" alt="Azaad"><span class="platform-tag">Feature Film</span></div><div class="card-details"><h3>Azaad</h3></div></div>
-                <div class="project-card"><div class="card-img-holder"><img src="Maalik.jpg" alt="Maalik"><span class="platform-tag">Feature Film</span></div><div class="card-details"><h3>Maalik</h3></div></div>
-                <div class="project-card"><div class="card-img-holder"><img src="Dabba Cartel.jpg.webp" alt="Dabba Cartel"><span class="platform-tag" style="background:#e50914; color:#fff;">Netflix</span></div><div class="card-details"><h3>Dabba Cartel</h3></div></div>
-            </div>
-        </section>
-
-        <section id="services">
-            <div class="section-header">
-                <h2>OTT, Shows & Dramas</h2>
-                <div class="slider-controls">
-                    <button class="arrow-btn" onclick="scrollSlider('series-slider', -280)">←</button>
-                    <button class="arrow-btn" onclick="scrollSlider('series-slider', 280)">→</button>
-                </div>
-            </div>
-
-            <div class="cards-slider" id="series-slider">
-                <div class="project-card"><div class="card-img-holder"><img src="Bharat Bhagya Vidhata.Jpg.jpg" alt="Bharat Bhagya Vidhata"><span class="platform-tag">Feature Film</span></div><div class="card-details"><h3>Bharat Bhagya Vidhata</h3></div></div>
-                <div class="project-card"><div class="card-img-holder"><img src="VVAN_JPG.jpg" alt="VVAN"><span class="platform-tag">Feature Film</span></div><div class="card-details"><h3>VVAN</h3></div></div>
-                <div class="project-card"><div class="card-img-holder"><img src="Next Schedule.jpg" alt="Next Schedule"><span class="platform-tag">Sports Drama</span></div><div class="card-details"><h3>Next Schedule</h3></div></div>
-                <div class="project-card"><div class="card-img-holder"><img src="Arranged Love.jpg" alt="Arranged Love"><span class="platform-tag">Original Movie</span></div><div class="card-details"><h3>Arranged Love</h3></div></div>
-                <div class="project-card"><div class="card-img-holder"><img src="Jab We Matched.jpg" alt="Jab We Matched"><span class="platform-tag">MiniTV</span></div><div class="card-details"><h3>Jab We Matched</h3></div></div>
-                <div class="project-card"><div class="card-img-holder"><img src="Zindagi Naagin.jpg" alt="Zindagi Naagin"><span class="platform-tag">Sony LIV</span></div><div class="card-details"><h3>Zindagi Naagin</h3></div></div>
-            </div>
-        </section>
-    </main>
-
-    <!-- BRANDS SECTION -->
-    <section class="brands-section">
-        <div class="section-header" style="justify-content: center;">
-            <h2>Worked For These Brands</h2>
-        </div>
-        <div class="brands-grid">
-            <div class="brand-box">Goibibo</div><div class="brand-box">Google</div><div class="brand-box">JB Infra</div><div class="brand-box">Glow & Lovely</div><div class="brand-box">Pond's</div><div class="brand-box">Boost</div><div class="brand-box">Zepto</div><div class="brand-box">Vivel</div><div class="brand-box">Swiggy</div><div class="brand-box">Dream11</div><div class="brand-box">Meta</div><div class="brand-box">Thar</div><div class="brand-box">VI</div><div class="brand-box">Himalaya</div><div class="brand-box">Oreo</div><div class="brand-box">PhonePe</div><div class="brand-box">KFC</div><div class="brand-box">Thums Up</div><div class="brand-box">Tata Play Binge</div><div class="brand-box">Saridon</div><div class="brand-box">Complan</div><div class="brand-box">Head & Shoulders</div><div class="brand-box">Money Heist</div><div class="brand-box">Taj (Wellington Mews)</div><div class="brand-box">Qubo</div><div class="brand-box">Parachute</div><div class="brand-box">Colgate</div><div class="brand-box">Tasva</div><div class="brand-box">Flipkart</div><div class="brand-box">Santor</div><div class="brand-box">Godrej Capital</div>
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="site-footer" id="submit">
-        <div class="footer-logo">Satyam Jha Casting</div>
-        <p class="footer-tagline">"Discovering raw talent & assembling iconic character ensembles."</p>
-        <a href="mailto:thatismesatyam@gmail.com" class="footer-cta-btn">Submit Profile / Contact Us</a>
-        <p class="copyright-text">© Satyam Jha Casting. All Rights Reserved.</p>
+    <!-- Projects / Posters Grid -->
+    <section id="projects" class="py-20 bg-zinc-900/50 border-t border-zinc-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <h2 class="text-3xl font-bold tracking-tight">Featured Works & Posters</h2>
+                <p class="text-zinc-400">A showcase of projects and design concepts handled.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Poster 1: Black and White Elegant Signature / Poster -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden group hover:border-red-600/50 transition">
+                    <div class="aspect-[3/4] overflow-hidden bg-zinc-950">
+                        <img src="Black and White Elegant Signatur..." alt="Black and White Poster" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-semibold text-lg">Signature Project Poster</h3>
+                        <p class="text-xs text-zinc-400 mt-1">Concept & Visual Identity</p>
+                    </div>
+                </div>
+
+                <!-- Poster 2: Azaad -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden group hover:border-red-600/50 transition">
+                    <div class="aspect-[3/4] overflow-hidden bg-zinc-950">
+                        <img src="Azaad.jpg" alt="Azaad" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-semibold text-lg">Azaad</h3>
+                        <p class="text-xs text-zinc-400 mt-1">Casting Project</p>
+                    </div>
+                </div>
+
+                <!-- Poster 3: Bharat Bhagya Vidhata -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden group hover:border-red-600/50 transition">
+                    <div class="aspect-[3/4] overflow-hidden bg-zinc-950">
+                        <img src="Bharat Bhagya Vidhata.jpg.jpg" alt="Bharat Bhagya Vidhata" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-semibold text-lg">Bharat Bhagya Vidhata</h3>
+                        <p class="text-xs text-zinc-400 mt-1">Casting Project</p>
+                    </div>
+                </div>
+
+                <!-- Poster 4: Black Warrant -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden group hover:border-red-600/50 transition">
+                    <div class="aspect-[3/4] overflow-hidden bg-zinc-950">
+                        <img src="Black Warrant.Jpg.jpg" alt="Black Warrant" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-semibold text-lg">Black Warrant</h3>
+                        <p class="text-xs text-zinc-400 mt-1">Casting Project</p>
+                    </div>
+                </div>
+
+                <!-- Poster 5: Dabba Cartel -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden group hover:border-red-600/50 transition">
+                    <div class="aspect-[3/4] overflow-hidden bg-zinc-950">
+                        <img src="Dabba Cartel.jpg.webp" alt="Dabba Cartel" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-semibold text-lg">Dabba Cartel</h3>
+                        <p class="text-xs text-zinc-400 mt-1">Casting Project</p>
+                    </div>
+                </div>
+
+                <!-- Poster 6: VVAN -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden group hover:border-red-600/50 transition">
+                    <div class="aspect-[3/4] overflow-hidden bg-zinc-950">
+                        <img src="VVAN.JPG.jpg" alt="VVAN" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-semibold text-lg">VVAN</h3>
+                        <p class="text-xs text-zinc-400 mt-1">Casting Project</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 border-t border-zinc-900">
+        <div class="max-w-4xl mx-auto px-6 text-center space-y-6">
+            <h2 class="text-3xl font-bold tracking-tight">Let's Collaborate</h2>
+            <p class="text-zinc-400 max-w-lg mx-auto">
+                Looking for casting requirements, auditions, or professional discussions? Reach out directly.
+            </p>
+            <div class="pt-2">
+                <a href="mailto:thatismesatyam@gmail.com" class="inline-flex items-center space-x-3 bg-zinc-900 border border-zinc-800 hover:border-red-600 px-6 py-3 rounded-xl transition text-zinc-200">
+                    <i class="fa-solid fa-envelope text-red-500"></i>
+                    <span>thatismesatyam@gmail.com</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-zinc-900 text-center text-xs text-zinc-500">
+        <p>&copy; 2026 Satyam Jha. All Rights Reserved.</p>
     </footer>
 
-    <script>
-        function scrollSlider(id, amount) {
-            document.getElementById(id).scrollBy({ left: amount, behavior: 'smooth' });
-        }
-    </script>
 </body>
 </html>
