@@ -41,44 +41,63 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 14px 4%;
+            padding: 12px 3%;
             background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(12px);
             position: sticky;
             top: 0;
             z-index: 100;
             border-bottom: 1px solid rgba(0,0,0,0.06);
-            gap: 10px;
+            gap: 6px;
         }
 
         .navbar-logo {
             display: flex;
             align-items: center;
-            flex-shrink: 1;
-            max-width: 45%;
+            text-decoration: none;
+            gap: 8px;
         }
 
-        .navbar-logo img {
-            height: 38px;
-            width: auto;
-            max-width: 100%;
-            object-fit: contain;
-            display: block;
-        }
-
-        .logo-fallback-text {
+        .logo-mark {
+            background: var(--text-main);
+            color: #fff;
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-family: 'Syne', sans-serif;
             font-weight: 800;
-            font-size: 1.1rem;
+            font-size: 0.9rem;
+        }
+
+        .logo-text-group {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
+        }
+
+        .logo-main-text {
+            font-family: 'Syne', sans-serif;
+            font-weight: 800;
+            font-size: 0.95rem;
             color: var(--text-main);
             letter-spacing: -0.5px;
-            white-space: nowrap;
+        }
+
+        .logo-sub-text {
+            font-size: 0.6rem;
+            font-weight: 700;
+            color: var(--primary-red);
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
         .nav-pills {
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 4px;
             flex-shrink: 0;
         }
 
@@ -86,24 +105,20 @@
             text-decoration: none;
             background: #ffffff;
             color: var(--text-main);
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 700;
-            padding: 7px 12px;
+            padding: 6px 10px;
             border-radius: 100px;
             border: 1px solid var(--border-color);
             display: flex;
             align-items: center;
-            gap: 5px;
-            transition: all 0.2s ease;
-        }
-
-        .pill-btn:hover {
-            border-color: var(--text-main);
+            gap: 4px;
+            white-space: nowrap;
         }
 
         .pill-btn svg {
-            width: 13px;
-            height: 13px;
+            width: 12px;
+            height: 12px;
             fill: currentColor;
         }
 
@@ -364,13 +379,12 @@
             border-top: 4px solid var(--primary-red);
         }
 
-        .footer-logo img {
-            height: 45px;
-            width: auto;
-            max-width: 200px;
-            object-fit: contain;
-            margin: 0 auto 18px;
-            display: block;
+        .footer-logo {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: #fff;
         }
 
         .footer-tagline {
@@ -396,34 +410,23 @@
             font-size: 0.78rem;
             color: #52525b;
         }
-
-        @media (max-width: 480px) {
-            header.navbar { padding: 12px 3%; }
-            .project-card { min-width: 210px; max-width: 210px; }
-            .section-header h2 { font-size: 1.3rem; }
-            .nav-pills { gap: 4px; }
-            .pill-btn { padding: 6px 9px; font-size: 0.7rem; }
-        }
     </style>
 </head>
 <body>
 
     <!-- NAVBAR HEADER -->
     <header class="navbar">
-        <div class="navbar-logo">
-            <img src="Black and White Elegant Signature Logo.jpg" alt="Satyam Jha Casting" onerror="this.style.display='none'; document.getElementById('hdr-txt').style.display='block';">
-            <span id="hdr-txt" class="logo-fallback-text" style="display:none;">Satyam Jha Casting</span>
-        </div>
+        <a href="#" class="navbar-logo">
+            <div class="logo-mark">SJ</div>
+            <div class="logo-text-group">
+                <span class="logo-main-text">Satyam Jha</span>
+                <span class="logo-sub-text">Casting</span>
+            </div>
+        </a>
         
         <div class="nav-pills">
-            <a href="https://www.instagram.com/satyamjhacastingcompany" target="_blank" class="pill-btn">
-                <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                Co.
-            </a>
-            <a href="https://www.instagram.com/imsatyamjha" target="_blank" class="pill-btn">
-                <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                Self
-            </a>
+            <a href="https://www.instagram.com/satyamjhacastingcompany" target="_blank" class="pill-btn">Co.</a>
+            <a href="https://www.instagram.com/imsatyamjha" target="_blank" class="pill-btn">Self</a>
             <a href="https://www.imdb.com/name/nm11658104/" target="_blank" class="pill-btn imdb">IMDb</a>
         </div>
     </header>
@@ -438,7 +441,7 @@
     <div class="profile-container" id="about">
         <div class="profile-card">
             <div class="profile-avatar-wrapper">
-                <img src="sat.JPG" alt="Satyam Jha" onerror="this.onerror=null; this.src='sat.jpg'; this.onerror=function(){this.parentElement.innerHTML='<div style=\'font-weight:800;font-size:2rem;color:#52525b;\'>SJ</div>';};">
+                <img src="sat.jpg" alt="Satyam Jha" onerror="this.onerror=null; this.src='sat.JPG'; this.onerror=function(){this.parentElement.innerHTML='<div style=\'font-weight:800;font-size:2rem;color:#52525b;\'>SJ</div>';};">
             </div>
             <h2 class="profile-name">Satyam Jha</h2>
             <div class="profile-title-sub">Casting Director</div>
@@ -450,7 +453,6 @@
 
     <!-- WORK SHOWCASE SECTION -->
     <main class="showcase" id="showcase">
-        <!-- FEATURE FILMS & SERIES -->
         <section style="margin-bottom: 50px;">
             <div class="section-header">
                 <h2>Feature Films & Series</h2>
@@ -461,57 +463,15 @@
             </div>
             
             <div class="cards-slider" id="films-slider">
-                <div class="project-card">
-                    <div class="card-img-holder">
-                        <img src="Border 2.jpeg" alt="Border 2">
-                        <span class="platform-tag">Feature Film</span>
-                    </div>
-                    <div class="card-details"><h3>Border 2</h3></div>
-                </div>
-
-                <div class="project-card">
-                    <div class="card-img-holder">
-                        <img src="Black Warrant.Jpg.jpeg" alt="Black Warrant">
-                        <span class="platform-tag" style="background:#e50914; color:#fff;">Netflix</span>
-                    </div>
-                    <div class="card-details"><h3>Black Warrant</h3></div>
-                </div>
-
-                <div class="project-card">
-                    <div class="card-img-holder">
-                        <img src="Jewel Thief.jpg" alt="Jewel Thief">
-                        <span class="platform-tag" style="background:#e50914; color:#fff;">Netflix</span>
-                    </div>
-                    <div class="card-details"><h3>Jewel Thief</h3></div>
-                </div>
-
-                <div class="project-card">
-                    <div class="card-img-holder">
-                        <img src="Azaad.jpg" alt="Azaad">
-                        <span class="platform-tag">Feature Film</span>
-                    </div>
-                    <div class="card-details"><h3>Azaad</h3></div>
-                </div>
-
-                <div class="project-card">
-                    <div class="card-img-holder">
-                        <img src="Maalik.jpg" alt="Maalik">
-                        <span class="platform-tag">Feature Film</span>
-                    </div>
-                    <div class="card-details"><h3>Maalik</h3></div>
-                </div>
-
-                <div class="project-card">
-                    <div class="card-img-holder">
-                        <img src="Dabba Cartel.jpg.webp" alt="Dabba Cartel">
-                        <span class="platform-tag" style="background:#e50914; color:#fff;">Netflix</span>
-                    </div>
-                    <div class="card-details"><h3>Dabba Cartel</h3></div>
-                </div>
+                <div class="project-card"><div class="card-img-holder"><img src="Border 2.jpeg" alt="Border 2"><span class="platform-tag">Feature Film</span></div><div class="card-details"><h3>Border 2</h3></div></div>
+                <div class="project-card"><div class="card-img-holder"><img src="Black Warrant.Jpg.jpeg" alt="Black Warrant"><span class="platform-tag" style="background:#e50914; color:#fff;">Netflix</span></div><div class="card-details"><h3>Black Warrant</h3></div></div>
+                <div class="project-card"><div class="card-img-holder"><img src="Jewel Thief.jpg" alt="Jewel Thief"><span class="platform-tag" style="background:#e50914; color:#fff;">Netflix</span></div><div class="card-details"><h3>Jewel Thief</h3></div></div>
+                <div class="project-card"><div class="card-img-holder"><img src="Azaad.jpg" alt="Azaad"><span class="platform-tag">Feature Film</span></div><div class="card-details"><h3>Azaad</h3></div></div>
+                <div class="project-card"><div class="card-img-holder"><img src="Maalik.jpg" alt="Maalik"><span class="platform-tag">Feature Film</span></div><div class="card-details"><h3>Maalik</h3></div></div>
+                <div class="project-card"><div class="card-img-holder"><img src="Dabba Cartel.jpg.webp" alt="Dabba Cartel"><span class="platform-tag" style="background:#e50914; color:#fff;">Netflix</span></div><div class="card-details"><h3>Dabba Cartel</h3></div></div>
             </div>
         </section>
 
-        <!-- OTT, SHOWS & DRAMAS -->
         <section id="services">
             <div class="section-header">
                 <h2>OTT, Shows & Dramas</h2>
@@ -522,38 +482,38 @@
             </div>
 
             <div class="cards-slider" id="series-slider">
-                <div class="project-card">
-                    <div class="card-img-holder">
-                        <img src="Bharat Bhagya Vidhata.Jpg.jpg" alt="Bharat Bhagya Vidhata">
-                        <span class="platform-tag">Feature Film</span>
-                    </div>
-                    <div class="card-details"><h3>Bharat Bhagya Vidhata</h3></div>
-                </div>
+                <div class="project-card"><div class="card-img-holder"><img src="Bharat Bhagya Vidhata.Jpg.jpg" alt="Bharat Bhagya Vidhata"><span class="platform-tag">Feature Film</span></div><div class="card-details"><h3>Bharat Bhagya Vidhata</h3></div></div>
+                <div class="project-card"><div class="card-img-holder"><img src="VVAN_JPG.jpg" alt="VVAN"><span class="platform-tag">Feature Film</span></div><div class="card-details"><h3>VVAN</h3></div></div>
+                <div class="project-card"><div class="card-img-holder"><img src="Next Schedule.jpg" alt="Next Schedule"><span class="platform-tag">Sports Drama</span></div><div class="card-details"><h3>Next Schedule</h3></div></div>
+                <div class="project-card"><div class="card-img-holder"><img src="Arranged Love.jpg" alt="Arranged Love"><span class="platform-tag">Original Movie</span></div><div class="card-details"><h3>Arranged Love</h3></div></div>
+                <div class="project-card"><div class="card-img-holder"><img src="Jab We Matched.jpg" alt="Jab We Matched"><span class="platform-tag">MiniTV</span></div><div class="card-details"><h3>Jab We Matched</h3></div></div>
+                <div class="project-card"><div class="card-img-holder"><img src="Zindagi Naagin.jpg" alt="Zindagi Naagin"><span class="platform-tag">Sony LIV</span></div><div class="card-details"><h3>Zindagi Naagin</h3></div></div>
+            </div>
+        </section>
+    </main>
 
-                <div class="project-card">
-                    <div class="card-img-holder">
-                        <img src="VVAN_JPG.jpg" alt="VVAN">
-                        <span class="platform-tag">Feature Film</span>
-                    </div>
-                    <div class="card-details"><h3>VVAN</h3></div>
-                </div>
+    <!-- BRANDS SECTION -->
+    <section class="brands-section">
+        <div class="section-header" style="justify-content: center;">
+            <h2>Worked For These Brands</h2>
+        </div>
+        <div class="brands-grid">
+            <div class="brand-box">Goibibo</div><div class="brand-box">Google</div><div class="brand-box">JB Infra</div><div class="brand-box">Glow & Lovely</div><div class="brand-box">Pond's</div><div class="brand-box">Boost</div><div class="brand-box">Zepto</div><div class="brand-box">Vivel</div><div class="brand-box">Swiggy</div><div class="brand-box">Dream11</div><div class="brand-box">Meta</div><div class="brand-box">Thar</div><div class="brand-box">VI</div><div class="brand-box">Himalaya</div><div class="brand-box">Oreo</div><div class="brand-box">PhonePe</div><div class="brand-box">KFC</div><div class="brand-box">Thums Up</div><div class="brand-box">Tata Play Binge</div><div class="brand-box">Saridon</div><div class="brand-box">Complan</div><div class="brand-box">Head & Shoulders</div><div class="brand-box">Money Heist</div><div class="brand-box">Taj (Wellington Mews)</div><div class="brand-box">Qubo</div><div class="brand-box">Parachute</div><div class="brand-box">Colgate</div><div class="brand-box">Tasva</div><div class="brand-box">Flipkart</div><div class="brand-box">Santor</div><div class="brand-box">Godrej Capital</div>
+        </div>
+    </section>
 
-                <div class="project-card">
-                    <div class="card-img-holder">
-                        <img src="Next Schedule.jpg" alt="Next Schedule">
-                        <span class="platform-tag">Sports Drama</span>
-                    </div>
-                    <div class="card-details"><h3>Next Schedule</h3></div>
-                </div>
+    <!-- FOOTER -->
+    <footer class="site-footer" id="submit">
+        <div class="footer-logo">Satyam Jha Casting</div>
+        <p class="footer-tagline">"Discovering raw talent & assembling iconic character ensembles."</p>
+        <a href="mailto:thatismesatyam@gmail.com" class="footer-cta-btn">Submit Profile / Contact Us</a>
+        <p class="copyright-text">© Satyam Jha Casting. All Rights Reserved.</p>
+    </footer>
 
-                <div class="project-card">
-                    <div class="card-img-holder">
-                        <img src="Arranged Love.jpg" alt="Arranged Love">
-                        <span class="platform-tag">Original Movie</span>
-                    </div>
-                    <div class="card-details"><h3>Arranged Love</h3></div>
-                </div>
-
-                <div class="project-card">
-                    <div class="card-img-holder">
-                        <img s
+    <script>
+        function scrollSlider(id, amount) {
+            document.getElementById(id).scrollBy({ left: amount, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
