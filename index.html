@@ -30,7 +30,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 5%;
+            padding: 15px 5%;
             background: rgba(13, 13, 13, 0.95);
             position: sticky;
             top: 0;
@@ -38,9 +38,20 @@
             border-bottom: 1px solid #222;
         }
 
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
         .logo-img {
-            height: 40px;
+            height: 65px; /* Increased size for high visibility */
+            width: auto;
             object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-img:hover {
+            transform: scale(1.05);
         }
 
         nav a {
@@ -293,7 +304,7 @@
 </head>
 <body>
 
-    <!-- Header with Logo -->
+    <!-- Header with Prominent Logo -->
     <header>
         <div class="logo">
             <img src="Black and White Elegant Signature Photography Logo_20260929_014429_0000.jpg" alt="Satyam Jha Logo" class="logo-img">
@@ -305,7 +316,7 @@
         </nav>
     </header>
 
-    <!-- Hero Section with Photo and Name Caption -->
+    <!-- Hero Section -->
     <section class="hero" id="about">
         <div class="hero-content">
             <div class="hero-badge">6 Years of Industry Experience</div>
@@ -325,7 +336,7 @@
         </div>
     </section>
 
-    <!-- Works Section with Categories & Sliding Effect -->
+    <!-- Works Section -->
     <section class="projects-section" id="works">
         <h2 class="section-title">Featured Works & Posters</h2>
         <p style="color: var(--text-secondary); margin-top: 5px; margin-bottom: 30px;">A showcase of projects and design concepts handled.</p>
