@@ -118,6 +118,26 @@
             letter-spacing: 1px;
         }
 
+        .about-section {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-content p {
+            color: #bbb;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -188,8 +208,7 @@
 
     <header>
         <div class="logo-container">
-            <!-- Updated Logo File Reference -->
-            <img src="satyam.black.jpeg" alt="Satyam Jha Logo">
+            <img src="satyam jha casting logo.png" alt="Satyam Jha Logo">
             <span class="brand-name">Satyam Jha</span>
         </div>
         <nav>
@@ -277,7 +296,18 @@
         </div>
     </div>
 
+    <div class="container" id="about">
+        <div class="about-section">
+            <h2 class="section-title" style="margin-top: 0; border-left-color: var(--accent-color);">About Me</h2>
+            <div class="about-content">
+                <p>With over 6 years of dedicated experience in the film and entertainment industry, I specialize in bringing compelling narratives to life by discovering and casting exceptional talent for feature films and prominent series.</p>
+                <p>My focus lies in understanding directors' creative visions and matching them with authentic faces and powerful performances that resonate with audiences.</p>
+            </div>
+        </div>
+    </div>
+
     <footer id="contact">
+        <h2 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-color);">Get In Touch</h2>
         <p>&copy; 2026 Satyam Jha. All Rights Reserved.</p>
         <p style="margin-top: 5px;">Contact: <a href="mailto:thatismesatyam@gmail.com">thatismesatyam@gmail.com</a></p>
     </footer>
