@@ -251,50 +251,86 @@
             margin: 0;
         }
 
+        /* Modern Structured Footer Styles */
         footer {
-            padding: 60px 5% 40px 5%;
+            background: #121212;
             border-top: 1px solid #222;
-            margin-top: 60px;
-            background: #090909;
-            text-align: center;
+            margin-top: 80px;
+            padding: 60px 5% 30px 5%;
+            color: var(--text-secondary);
         }
 
-        .footer-logo {
+        .footer-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.5fr 1.5fr 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .footer-col h4 {
+            color: var(--text-primary);
+            font-size: 1.15rem;
             margin-bottom: 20px;
+            font-weight: 600;
         }
 
         .footer-logo-img {
             height: 70px;
             width: auto;
             object-fit: contain;
-            opacity: 0.9;
-        }
-
-        footer h3 {
-            font-size: 1.8rem;
+            background: #fff;
+            padding: 5px 10px;
+            border-radius: 6px;
             margin-bottom: 15px;
         }
 
-        footer p {
+        .footer-col p {
+            font-size: 0.95rem;
+            line-height: 1.6;
             color: var(--text-secondary);
-            margin-bottom: 25px;
         }
 
-        .email-link {
-            color: var(--text-primary);
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-secondary);
             text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
         }
 
-        .email-link:hover {
+        .footer-col ul li a:hover {
             color: var(--accent);
         }
 
-        .copyright {
-            margin-top: 50px;
+        .footer-bottom {
+            max-width: 1300px;
+            margin: 50px auto 0 auto;
+            padding-top: 25px;
+            border-top: 1px solid #222;
+            text-align: center;
             font-size: 0.85rem;
-            color: #555;
+            color: #666;
+        }
+
+        .footer-bottom a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        @media(max-width: 900px) {
+            .footer-container {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
         }
 
         @media(max-width: 850px) {
@@ -309,6 +345,16 @@
                 border-left: none;
                 padding-left: 0;
                 text-align: center;
+            }
+        }
+
+        @media(max-width: 550px) {
+            .footer-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .footer-logo-img {
+                margin: 0 auto 15px auto;
             }
         }
     </style>
@@ -462,16 +508,44 @@
         </div>
     </section>
 
-    <!-- Contact Section / Footer with Logo -->
+    <!-- Multi-Column Professional Footer -->
     <footer id="contact">
-        <div class="footer-logo">
-            <img src="Black and White Elegant Signature Photography Logo_20260929_014429_0000.jpg" alt="Satyam Jha Logo" class="footer-logo-img">
+        <div class="footer-container">
+            <!-- Column 1: Logo & Info -->
+            <div class="footer-col">
+                <img src="Black and White Elegant Signature Photography Logo_20260929_014429_0000.jpg" alt="Satyam Jha Logo" class="footer-logo-img">
+                <p>Professional Casting Director with 6 years of industry experience bringing authentic characters to life.</p>
+            </div>
+
+            <!-- Column 2: Contact Info -->
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <p>Mumbai, Maharashtra<br>
+                Email: <a href="mailto:thatismesatyam@gmail.com" style="color: var(--text-primary); text-decoration: none;">thatismesatyam@gmail.com</a></p>
+            </div>
+
+            <!-- Column 3: Quick Links -->
+            <div class="footer-col">
+                <h4>Quick Link</h4>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#works">Works</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Our Work -->
+            <div class="footer-col">
+                <h4>Our Work</h4>
+                <ul>
+                    <li><a href="#works">Feature Films</a></li>
+                    <li><a href="#works">Web Series</a></li>
+                </ul>
+            </div>
         </div>
-        <h3>Let's Collaborate</h3>
-        <p>Looking for casting requirements, auditions, or professional discussions? Reach out directly.</p>
-        <a href="mailto:thatismesatyam@gmail.com" class="email-link">thatismesatyam@gmail.com</a>
-        <div class="copyright">
-            © 2026 Satyam Jha. All Rights Reserved.
+
+        <div class="footer-bottom">
+            Copyright © 2026 Satyam Jha. All Rights Reserved.
         </div>
     </footer>
 
