@@ -222,6 +222,7 @@
             transition: transform 0.3s ease;
             white-space: normal;
             border: 1px solid #222;
+            position: relative;
         }
 
         .slide-card:hover {
@@ -233,6 +234,20 @@
             width: 100%;
             height: 380px;
             object-fit: cover;
+        }
+
+        .badge-upcoming {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.75);
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 20px;
+            text-transform: uppercase;
         }
 
         .slide-card .card-content {
@@ -356,7 +371,7 @@
 </head>
 <body>
 
-    <!-- Header with New Logo -->
+    <!-- Header with Logo -->
     <header>
         <div class="logo">
             <img src="satyam jha casting logo.png" alt="Satyam Jha Casting Logo" class="logo-img">
@@ -398,60 +413,53 @@
             <h3>Feature Films</h3>
             <div class="slider-container">
                 <div class="slider-track">
+                    <!-- Azaad -->
                     <div class="slide-card">
                         <img src="Azaad.jpg" alt="Azaad">
                         <div class="card-content">
                             <h4>Azaad</h4>
-                            <p>Casting Project</p>
+                            <p>Feature Film</p>
                         </div>
                     </div>
+                    <!-- Bharat Bhagya Vidhata -->
                     <div class="slide-card">
                         <img src="Bharat Bhagya Vidhata.Jpg.jpg" alt="Bharat Bhagya Vidhata">
                         <div class="card-content">
                             <h4>Bharat Bhagya Vidhata</h4>
-                            <p>Casting Project</p>
+                            <p>Feature Film</p>
                         </div>
                     </div>
+                    <!-- Border 2 -->
                     <div class="slide-card">
                         <img src="Border 2.jpeg" alt="Border 2">
                         <div class="card-content">
                             <h4>Border 2</h4>
-                            <p>Casting Project</p>
+                            <p>Feature Film</p>
                         </div>
                     </div>
+                    <!-- VVAN -->
                     <div class="slide-card">
                         <img src="VVAN.JPG.jpg" alt="VVAN">
                         <div class="card-content">
                             <h4>VVAN</h4>
-                            <p>Casting Project</p>
-                        </div>
-                    </div>
-                    <div class="slide-card">
-                        <div style="width:100%; height:380px; background:#222; display:flex; align-items:center; justify-content:center; color:#777; font-weight:600;">Coming Soon</div>
-                        <div class="card-content">
-                            <h4>Kabir Khan × Kartik Aaryan</h4>
-                            <p>Upcoming Feature Film</p>
-                        </div>
-                    </div>
-                    <div class="slide-card">
-                        <div style="width:100%; height:380px; background:#222; display:flex; align-items:center; justify-content:center; color:#777; font-weight:600;">Coming Soon</div>
-                        <div class="card-content">
-                            <h4>Dada (Sourav Ganguly Biopic)</h4>
                             <p>Feature Film</p>
                         </div>
                     </div>
+                    <!-- Jewel Thief -->
                     <div class="slide-card">
-                        <div style="width:100%; height:380px; background:#222; display:flex; align-items:center; justify-content:center; color:#777; font-weight:600;">Coming Soon</div>
+                        <img src="JEWEL THIEF.png" alt="Jewel Thief">
                         <div class="card-content">
                             <h4>Jewel Thief</h4>
                             <p>Feature Film</p>
                         </div>
                     </div>
+                    <!-- Dada (Upcoming) -->
                     <div class="slide-card">
-                        <div style="width:100%; height:380px; background:#222; display:flex; align-items:center; justify-content:center; color:#777; font-weight:600;">Coming Soon</div>
+                        <span class="badge-upcoming">Upcoming</span>
+                        <img src="DADA.jpg" alt="Dada">
                         <div class="card-content">
-                            <h4>Maalik</h4>
-                            <p>Feature Film</p>
+                            <h4>Dada</h4>
+                            <p>Sourav Ganguly Biopic</p>
                         </div>
                     </div>
                 </div>
@@ -463,38 +471,44 @@
             <h3>Web Series & Digital</h3>
             <div class="slider-container">
                 <div class="slider-track">
+                    <!-- Black Warrant -->
                     <div class="slide-card">
                         <img src="Black Warrant.Jpg.jpeg" alt="Black Warrant">
                         <div class="card-content">
                             <h4>Black Warrant</h4>
-                            <p>Casting Project</p>
+                            <p>Web Series</p>
                         </div>
                     </div>
+                    <!-- Black Warrant Season 2 (Upcoming) -->
                     <div class="slide-card">
-                        <div style="width:100%; height:380px; background:#222; display:flex; align-items:center; justify-content:center; color:#777; font-weight:600;">Coming Soon</div>
+                        <span class="badge-upcoming">Upcoming</span>
+                        <img src="BLACK WARRANT SEASON 2.jpg" alt="Black Warrant Season 2">
                         <div class="card-content">
                             <h4>Black Warrant Season 2</h4>
                             <p>Web Series</p>
                         </div>
                     </div>
+                    <!-- Dabba Cartel -->
                     <div class="slide-card">
                         <img src="Dabba Cartel.jpg.webp" alt="Dabba Cartel">
                         <div class="card-content">
                             <h4>Dabba Cartel</h4>
-                            <p>Casting Project</p>
+                            <p>Web Series</p>
                         </div>
                     </div>
+                    <!-- Arranged Love -->
                     <div class="slide-card">
-                        <div style="width:100%; height:380px; background:#222; display:flex; align-items:center; justify-content:center; color:#777; font-weight:600;">Coming Soon</div>
+                        <img src="arrange love.jpg" alt="Arranged Love">
                         <div class="card-content">
                             <h4>Arranged Love</h4>
                             <p>Web Series</p>
                         </div>
                     </div>
+                    <!-- Zindaginama -->
                     <div class="slide-card">
-                        <div style="width:100%; height:380px; background:#222; display:flex; align-items:center; justify-content:center; color:#777; font-weight:600;">Coming Soon</div>
+                        <img src="ZINDAGINAMA.png" alt="Zindaginama">
                         <div class="card-content">
-                            <h4>Zindagi Nama</h4>
+                            <h4>Zindaginama</h4>
                             <p>Web Series</p>
                         </div>
                     </div>
@@ -503,10 +517,10 @@
         </div>
     </section>
 
-    <!-- Multi-Column Professional Footer with Social Links -->
+    <!-- Footer with Social Links -->
     <footer id="contact">
         <div class="footer-container">
-            <!-- Column 1: New Logo & Info -->
+            <!-- Column 1: Logo & Info -->
             <div class="footer-col">
                 <img src="satyam jha casting logo.png" alt="Satyam Jha Casting Logo" class="footer-logo-img">
                 <p>Professional Casting Director with 6 years of industry experience bringing authentic characters to life.</p>
