@@ -38,11 +38,14 @@
             display: flex;
             align-items: center;
         }
-        .logo-text {
-            font-size: 1.4rem;
-            font-weight: bold;
-            color: #fff;
-            letter-spacing: 0.5px;
+        .logo-img {
+            height: 60px;
+            width: auto;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+        .logo-img:hover {
+            transform: scale(1.05);
         }
         nav {
             display: flex;
@@ -103,12 +106,12 @@
             flex: 1;
         }
         .hero-img-container {
-            flex: 0 0 320px;
+            flex: 0 0 300px;
             text-align: center;
         }
         .hero-img-container img {
             width: 100%;
-            height: 400px;
+            height: 380px;
             object-fit: cover;
             border-radius: 12px;
             border: 2px solid #333;
@@ -184,13 +187,15 @@
             padding-left: 15px;
         }
         .project-category {
-            margin-top: 40px;
+            margin-top: 50px;
         }
         .project-category h3 {
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             margin-bottom: 20px;
             color: var(--text-primary);
-            font-weight: 500;
+            font-weight: 600;
+            border-bottom: 1px solid #222;
+            padding-bottom: 8px;
         }
         .slider-container {
             width: 100%;
@@ -261,7 +266,6 @@
             color: var(--text-secondary);
             margin: 0;
         }
-        /* Footer Styles */
         footer {
             background: #121212;
             border-top: 1px solid #222;
@@ -273,8 +277,8 @@
             max-width: 1300px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
-            gap: 30px;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
             align-items: start;
         }
         .footer-col h4 {
@@ -283,38 +287,29 @@
             margin-bottom: 20px;
             font-weight: 600;
         }
-        .footer-logo-img {
-            height: 70px;
-            width: auto;
-            object-fit: contain;
-            background: #fff;
-            padding: 5px 10px;
-            border-radius: 6px;
-            margin-bottom: 15px;
-        }
         .footer-col p {
             font-size: 0.95rem;
             line-height: 1.6;
             color: var(--text-secondary);
+            margin-bottom: 15px;
         }
-        .footer-col ul {
+        .social-links-list {
             list-style: none;
         }
-        .footer-col ul li {
-            margin-bottom: 12px;
+        .social-links-list li {
+            margin-bottom: 10px;
         }
-        .footer-col ul li a {
+        .social-links-list a {
             color: var(--text-secondary);
             text-decoration: none;
-            font-size: 0.95rem;
             transition: color 0.3s;
         }
-        .footer-col ul li a:hover {
+        .social-links-list a:hover {
             color: var(--accent);
         }
         .footer-bottom {
             max-width: 1300px;
-            margin: 50px auto 0 auto;
+            margin: 40px auto 0 auto;
             padding-top: 25px;
             border-top: 1px solid #222;
             text-align: center;
@@ -325,7 +320,7 @@
 <body>
     <header>
         <div class="logo">
-            <span class="logo-text">Satyam Jha</span>
+            <img src="satyam jha casting logo.png" alt="Satyam Jha Casting Logo" class="logo-img">
         </div>
         <nav>
             <a href="#projects">Projects</a>
@@ -353,6 +348,7 @@
             </div>
         </div>
         <div class="hero-img-container">
+            <img src="sat.JPG" alt="Satyam Jha">
             <div class="hero-photo-caption">
                 <h3>Satyam Jha</h3>
                 <p>Casting Director</p>
@@ -363,48 +359,55 @@
     <section id="projects" class="projects-section">
         <h2 class="section-title">Featured Portfolio</h2>
 
-        <!-- Feature Films Category -->
+        <!-- 1. Feature Films Section -->
         <div class="project-category">
             <h3>Feature Films</h3>
             <div class="slider-container">
                 <div class="slider-track">
                     <div class="slide-card">
+                        <img src="Azaad.jpg" alt="Azaad">
                         <div class="card-content">
                             <h4>Azaad</h4>
                             <p>Feature Film</p>
                         </div>
                     </div>
                     <div class="slide-card">
+                        <img src="Bharat Bhagya Vidhata.Jpg.jpg" alt="Bharat Bhagya Vidhata">
                         <div class="card-content">
                             <h4>Bharat Bhagya Vidhata</h4>
                             <p>Feature Film</p>
                         </div>
                     </div>
                     <div class="slide-card">
+                        <img src="Black Warrant.Jpg.jpeg" alt="Black Warrant">
                         <div class="card-content">
                             <h4>Black Warrant</h4>
                             <p>Feature Film</p>
                         </div>
                     </div>
                     <div class="slide-card">
+                        <img src="Border 2.jpeg" alt="Border 2">
                         <div class="card-content">
                             <h4>Border 2</h4>
                             <p>Feature Film</p>
                         </div>
                     </div>
                     <div class="slide-card">
+                        <img src="JEWEL THIEF.png" alt="Jewel Thief">
                         <div class="card-content">
                             <h4>Jewel Thief</h4>
                             <p>Feature Film</p>
                         </div>
                     </div>
                     <div class="slide-card">
+                        <img src="955-736_18.webp" alt="Maalik">
                         <div class="card-content">
                             <h4>Maalik</h4>
                             <p>Feature Film</p>
                         </div>
                     </div>
                     <div class="slide-card">
+                        <img src="VVAN.JPG.jpg" alt="Vvan">
                         <div class="card-content">
                             <h4>Vvan</h4>
                             <p>Feature Film</p>
@@ -412,6 +415,7 @@
                     </div>
                     <div class="slide-card">
                         <span class="badge-upcoming">Upcoming</span>
+                        <img src="DADA.jpg" alt="Dada">
                         <div class="card-content">
                             <h4>Dada</h4>
                             <p>Feature Film</p>
@@ -421,30 +425,34 @@
             </div>
         </div>
 
-        <!-- OTT Web Series Category -->
+        <!-- 2. OTT Web Series Section -->
         <div class="project-category">
             <h3>OTT Web Series</h3>
             <div class="slider-container">
                 <div class="slider-track">
                     <div class="slide-card">
+                        <img src="Dabba Cartel.jpg.webp" alt="Dabba Cartel">
                         <div class="card-content">
                             <h4>Dabba Cartel</h4>
                             <p>Web Series</p>
                         </div>
                     </div>
                     <div class="slide-card">
+                        <img src="BLACK WARRANT SEASON 2.jpg" alt="Black Warrant Season 2">
                         <div class="card-content">
                             <h4>Black Warrant Season 2</h4>
                             <p>Web Series</p>
                         </div>
                     </div>
                     <div class="slide-card">
+                        <img src="arrange love.jpg" alt="Arranged Love">
                         <div class="card-content">
                             <h4>Arranged Love</h4>
                             <p>Web Series</p>
                         </div>
                     </div>
                     <div class="slide-card">
+                        <img src="ZINDAGINAMA.png" alt="Zindagi Nama">
                         <div class="card-content">
                             <h4>Zindagi Nama</h4>
                             <p>Web Series</p>
@@ -454,20 +462,43 @@
             </div>
         </div>
 
-        <!-- Commercials Category -->
+        <!-- 3. Commercials & Ads Section -->
         <div class="project-category" id="contact">
             <h3>Commercials & Ads</h3>
             <div class="slider-container">
                 <div class="slider-track">
                     <div class="slide-card">
+                        <img src="Boost_Nestlé_logo_(cropped).png" alt="Boost">
                         <div class="card-content">
-                            <h4>Brand Campaign</h4>
+                            <h4>Boost</h4>
                             <p>Commercial Casting</p>
                         </div>
                     </div>
                     <div class="slide-card">
+                        <img src="Dream11_Logo_2023.png" alt="Dream11">
                         <div class="card-content">
-                            <h4>TVC Project</h4>
+                            <h4>Dream11</h4>
+                            <p>Commercial Casting</p>
+                        </div>
+                    </div>
+                    <div class="slide-card">
+                        <img src="Flipkart_logo_(2026).svg.png" alt="Flipkart">
+                        <div class="card-content">
+                            <h4>Flipkart</h4>
+                            <p>Commercial Casting</p>
+                        </div>
+                    </div>
+                    <div class="slide-card">
+                        <img src="Swiggy-Symbol.png" alt="Swiggy">
+                        <div class="card-content">
+                            <h4>Swiggy</h4>
+                            <p>Commercial Casting</p>
+                        </div>
+                    </div>
+                    <div class="slide-card">
+                        <img src="KFC-Logo.png" alt="KFC">
+                        <div class="card-content">
+                            <h4>KFC</h4>
                             <p>Commercial Casting</p>
                         </div>
                     </div>
@@ -480,13 +511,13 @@
         <div class="footer-container">
             <div class="footer-col">
                 <h4>Satyam Jha Casting</h4>
-                <p>Delivering exceptional talent for feature films, web series, and major commercial brands.</p>
+                <p>Delivering exceptional talent for feature films, web series, and major commercial brands with 6 years of industry expertise.</p>
             </div>
             <div class="footer-col">
                 <h4>Connect</h4>
-                <ul style="list-style: none;">
-                    <li style="margin-bottom: 8px;"><a href="https://instagram.com/imsatyamjha" target="_blank" style="color: var(--text-secondary); text-decoration: none;">Personal: @imsatyamjha</a></li>
-                    <li><a href="https://instagram.com/satyamjhacasting" target="_blank" style="color: var(--text-secondary); text-decoration: none;">Company: @satyamjhacasting</a></li>
+                <ul class="social-links-list">
+                    <li><a href="https://instagram.com/imsatyamjha" target="_blank">Personal: @imsatyamjha</a></li>
+                    <li><a href="https://instagram.com/satyamjhacasting" target="_blank">Company: @satyamjhacasting</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -494,4 +525,9 @@
                 <p>Email: thatismesatyam@gmail.com</p>
             </div>
         </div>
-        <div
+        <div class="footer-bottom">
+            <p>&copy; 2026 Satyam Jha. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
